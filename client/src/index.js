@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import Brands from './Brands'
+import Brands from './Brands/Brands'
 
 //different paths of website
 const router = createBrowserRouter([
