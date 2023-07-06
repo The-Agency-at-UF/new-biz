@@ -1,7 +1,6 @@
 import {useState, useEffect, useRef, React} from 'react';
 import {Dropdown, getOption} from './Dropdown/Dropdown';
 import { useNavigate } from 'react-router-dom';
-import Brands from './Brands';
 
 const API_BASE = "http://localhost:3001";
 // This line connects this front-end code to the server
