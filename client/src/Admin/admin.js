@@ -1,5 +1,5 @@
 import {React, useState, useEffect} from 'react';
-import Test from '../Pages/test';
+import Test from './test.js';
 
 const API_BASE = "http://localhost:3001";
 
