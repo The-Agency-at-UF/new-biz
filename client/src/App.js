@@ -13,7 +13,6 @@ const App = () => {
 
   useEffect(() => {
     GetCaseStudies();
-    // console.log(casestudies);
   }, []);
 
   const GetCaseStudies = () => {
@@ -22,16 +21,6 @@ const App = () => {
       .then(data => setCaseStudies(data))
       .catch(err => console.error("Error: ", err));
   }
-  
-  const DeleteData = async () => {
-    try {
-      const response = await fetch(API_BASE + "/CaseStudies");
-      const data = await response.json();
-      console.log(data.message);
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
 
   const handleSelection = (order, selectedValue) => {
     setSelectedValues(prevSelectedValues => ({
@@ -40,14 +29,33 @@ const App = () => {
     }));
   }
 
+  // post selected case studies
+  const postCaseStudy = async (caseStudyOrder) => {
+    const data = await fetch(API_BASE + '/CaseStudy/new', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        order: caseStudyOrder,
+        text: selectedValues[caseStudyOrder]
+      })
+    }).then(res => res.json);
+
+    console.log(data)
+  }
+
   const toNewSite = async () => {
     // Get values inside dropdowns | complete: selected values
     console.log(selectedValues);
 
-    //navigate to new webpage and pass over the selected values
-    navigate('/brands',{state:{brand1: selectedValues["1"], brand2: selectedValues["2"], brand3: selectedValues["3"]}})
-    
-    await DeleteData();
+    //post each case studies
+    for (let i in selectedValues) {
+      postCaseStudy(i);
+    }
+
+    //navigate to new webpage
+    navigate('/CaseStudies')
   }
 
   return (
