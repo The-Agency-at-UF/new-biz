@@ -1,6 +1,7 @@
 import {useState, useEffect, useRef } from 'react';
 import {Dropdown, getOption} from './Dropdown/Dropdown';
 import Admin from './Admin/admin.js';
+import Home from './Dropdown/home.js'
 
 const API_BASE = "http://localhost:3001";
 // This line connects this front-end code to the server
@@ -49,8 +50,13 @@ const App = () => {
 
 
   return (
-    <Admin />
-  );
+    <div>
+
+
+      <Admin />
+      <Home />
+    </div>
+  )
 }
 
 export default App;
