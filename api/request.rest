@@ -1,0 +1,58 @@
+GET http://localhost:3001/CaseStudies
+
+
+###
+POST http://localhost:3001/CaseStudy/new
+Content-Type: application/json
+
+{
+    "text": "second",
+    "order":  2
+}
+
+###
+DELETE http://localhost:3001/CaseStudies/deleteAll
+
+
+###
+PUT http://localhost:3001/CaseStudy/update/649b9340e6066c4e4f391618/
+Content-Type: application/json
+
+{
+    "text": "updated"
+}
+
+
+
+
+###
+GET http://localhost:3001/UserInfo
+
+###
+POST http://localhost:3001/UserInfo/new
+Content-Type: application/json
+
+{
+    "username": "test",
+    "password":  "admin"
+}
+
+###
+POST http://localhost:3001/UserInfo/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password":  "admin"
+}
+###
+DELETE http://localhost:3001/UserInfo/deleteAll
+
+###
+PUT http://localhost:3001/UserInfo/update/649baaaa86fc50c32324ac3a/
+Content-Type: application/json
+
+{
+    "username": "test@test",
+    "password":  "admin1"
+}

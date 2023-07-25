@@ -1,6 +1,8 @@
 import {useState, useEffect, useRef, React} from 'react';
 import {Dropdown, getOption} from './Dropdown/Dropdown';
 import { useNavigate } from 'react-router-dom';
+import Admin from './Admin/admin.js';
+import Home from './Dropdown/home.js'
 
 const API_BASE = "http://localhost:3001";
 // This line connects this front-end code to the server
@@ -72,7 +74,7 @@ const App = () => {
       <button onClick={()=>{toNewSite()}}>Load New Site!</button>
 
     </div>
-  );
+  )
 }
 
 export default App;

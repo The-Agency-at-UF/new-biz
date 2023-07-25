@@ -63,4 +63,65 @@ app.delete('/CaseStudies/deleteAll', async (req, res) => {
     res.json({ message: 'All data deleted successfully' });
 })
 
+
+var UserInfo = require('./models/UserModel');
+
+app.get('/UserInfo', async (req, res) => {
+    const UserInfos = await UserInfo.find();
+
+    res.json(UserInfos);
+});
+
+app.post('/UserInfo/new', (req, res) => {
+    var userinfo = new UserInfo({
+        username: req.body.username,
+        password: req.body.password
+    });
+
+    userinfo.password = userinfo.generateHash(req.body.password);
+    userinfo.save();
+
+    res.json(userinfo);
+});
+
+app.post('/UserInfo/login', async (req, res) => {
+    try {
+        const existingUser = await UserInfo.findOne({ username: req.body.username });
+        
+        if (!existingUser) {
+          return res.json({ message: `No account with this email found` });
+        }
+    
+        const user = await UserInfo.findOne({ username: req.body.username });
+        if (!user.validPassword(req.body.password)) {
+          res.json({ message: 'Incorrect password' });
+        } else {
+          res.json({ message: 'Login successful' });
+        }
+      } catch (error) {
+        // Handle any errors that occurred during the process
+        res.status(500).json({ message: 'Internal server error' });
+      }
+});
+
+app.put('/UserInfo/update/:id', async (req, res) => {
+    const userinfo = await UserInfo.findById(req.params.id);
+
+    console.log(req.body.username);
+    console.log(req.body.password);
+
+    userinfo.username = req.body.username;
+    userinfo.password = req.body.password;
+
+    userinfo.save();
+
+    res.json(userinfo);
+});
+
+app.delete('/UserInfo/deleteAll', async (req, res) => {
+    await UserInfo.deleteMany();
+
+    res.json({ message: 'All data deleted successfully' });
+})
+
 app.listen(3001, () => console.log("Server started on port 3001"));
