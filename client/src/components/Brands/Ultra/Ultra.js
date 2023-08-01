@@ -1,5 +1,5 @@
 import {React, useState, useEffect} from 'react';
-import ultraImg from '../Images/michelobultra.png';
+import ultraImg from '../../../images/michelobultra.png';
 import './ultra.css'
 
 const API_BASE = "http://localhost:3001";

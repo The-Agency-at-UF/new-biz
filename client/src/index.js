@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import Brands from './Brands/Brands'
+import Brands from './components/Brands/Brands'
 
 //different paths of website
 const router = createBrowserRouter([
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path:'brands',
+    path:'CaseStudies',
     element: <Brands />
   }
 ]);

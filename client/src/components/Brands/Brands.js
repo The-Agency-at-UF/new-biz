@@ -28,10 +28,22 @@ const Brands = () => {
         casestudies = orderedCaseStudies
     }
 
-    const DeleteData = async id => {
-        const data = await fetch(API_BASE + '/CaseStudy/delete/' + id, { method: "DELETE" }).then(res => res.json());
-        setCaseStudies(casestudies => casestudies.filter(casestudy => casestudy._id !== data.result._id));
-    }
+    // const DeleteData = async id => {
+    //     const data = await fetch(API_BASE + '/CaseStudy/delete/' + id, { method: "DELETE" }).then(res => res.json());
+    //     setCaseStudies(casestudies => casestudies.filter(casestudy => casestudy._id !== data.result._id));
+    // }
+    const DeleteAllData = async () => {
+        try {
+            const response = await fetch(API_BASE + '/CaseStudies/deleteAll', {
+                method: 'DELETE',
+            });
+            const data = await response.json();
+            setCaseStudies([]);
+            console.log(data); // Optional: Log the server response
+        } catch (error) {
+            console.error('Error deleting all data:', error);
+        }
+    };
 
     const CallBrands = (props) => {
         console.log(casestudies)
@@ -55,9 +67,11 @@ const Brands = () => {
     
     const goBack = async () => {
         //delete all casestudies
-        for (let i in casestudies) {
-            DeleteData(casestudies[i]._id)
-        };
+        // for (let i in casestudies) {
+        //     DeleteData(casestudies[i]._id)
+        // };
+
+        DeleteAllData();
         
         //navigate back to home page
         navigate('/')

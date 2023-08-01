@@ -6,8 +6,8 @@ POST http://localhost:3001/CaseStudy/new
 Content-Type: application/json
 
 {
-    "text": "second",
-    "order":  2
+    "text": "third",
+    "order":  3
 }
 
 ###
