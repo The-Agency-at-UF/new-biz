@@ -1,0 +1,50 @@
+.logo-image{
+    max-width: 50%;
+    max-height: 60%;
+    padding: 10%;
+    display: block;
+    margin: auto;
+}
+
+.arrow-styling{
+    max-width: 3%;
+    max-height: 3%;
+    display: block;
+    margin: auto;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-size: 5vw;
+    padding: 3%;
+    margin: auto;
+}
+
+p{
+    color: white;
+    text-align: center;
+    font-size: 2vw;
+    inline-size: 60%;
+    padding: 2%;
+    margin: auto;
+}
+
+.text-glow {
+    animation-name: glow;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 0px #ffffff, 0 0 0px #ffffff, 0 0 0px #ffffff, 0 0 0px #ffffff,0 0 0px #ffffff;
+    }
+    to {
+        text-shadow: 0 0 40px #ffffff, 0 0 40px #ffffff;
+    }
+}
