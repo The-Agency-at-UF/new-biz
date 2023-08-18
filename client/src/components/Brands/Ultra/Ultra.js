@@ -11,7 +11,7 @@ const Ultra = () => {
 
   return ( 
     <div style={{ backgroundColor: 'black' }}>
-        <img class='image' src={ultraImg} alt="Michelob Ultra" />
+        <img className='image' src={ultraImg} alt="Michelob Ultra" />
     </div>
 
   );

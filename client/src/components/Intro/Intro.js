@@ -1,9 +1,13 @@
-import React, {useEffect} from 'react';
+import React, {useRef, useEffect} from 'react';
 import logoImg from '../../Images/Logo.png';
 import downArrow from '../../Images/down-arrow.svg'
 import './Intro.css'
+import FollowMouseImage from './FollowMouseImage';
 
 const Intro = () => {
+
+    const canvasRef = useRef(null)
+
     useEffect(() => {
         const textGlowElement = document.querySelector('.text-glow');
         
@@ -36,12 +40,13 @@ const Intro = () => {
 
     return (
         <div>
-            <img class = "logo-image" src={logoImg} alt="" />
-            <img class = "arrow-styling" src={downArrow} alt="" />
+            <img className = "logo-image" src={logoImg} alt="" />
+            {/* <FollowMouseImage img={logoImg} /> */}
+            <img className = "arrow-styling" src={downArrow} alt="" />
             <h1>WE ARE</h1>
             <p>A strategic communications firm led by professionals and staffed by students who are reimagining advertising and public relations.</p>
             <p>We're a team of bold students with an unparalleled motivation to the best work for anyone seeking it. We are researchers, managers, creatives and coordinators - but most of all, we are the ambitious youth setting the precedent in communications.</p>
-            <h1 class = "text-glow">WE ILLUMINATE THE CULTURAL STAGE WITH GEN Z PASSION</h1>
+            <h1 className = "text-glow">WE ILLUMINATE THE CULTURAL STAGE WITH GEN Z PASSION</h1>
         </div>
 
 
