@@ -1,18 +1,18 @@
 import {useState, useEffect, useRef, React} from 'react';
 import { useNavigate } from "react-router-dom";
-import Uber from './CaseStudies/Uber'
-import Bliss from './CaseStudies/Bliss'
-import Monday from "./CaseStudies/Monday";
-import Intro from '../Intro/Intro';
-import Services from '../Services/Services';
-import Team from '../Team/Team';
+import Uber from './Brands/CaseStudies/Uber'
+import Bliss from './Brands/CaseStudies/Bliss'
+import Monday from "./Brands/CaseStudies/Monday";
+import Intro from './Intro/Intro';
+import Services from './Services/Services';
+import Team from './Team/Team';
 
 
 const API_BASE = "http://localhost:3001";
 
 // This page loads the case studies from the database and exports them to the page in the specified order
 
-const Brands = () => {
+const Main = () => {
     let [casestudies, setCaseStudies] = useState([]);
     const navigate = useNavigate();
 
@@ -34,10 +34,6 @@ const Brands = () => {
         casestudies = orderedCaseStudies
     }
 
-    // const DeleteData = async id => {
-    //     const data = await fetch(API_BASE + '/CaseStudy/delete/' + id, { method: "DELETE" }).then(res => res.json());
-    //     setCaseStudies(casestudies => casestudies.filter(casestudy => casestudy._id !== data.result._id));
-    // }
     const DeleteAllData = async () => {
         try {
             const response = await fetch(API_BASE + '/CaseStudies/deleteAll', {
@@ -103,4 +99,4 @@ const Brands = () => {
     )
 }
 
-export default Brands;
+export default Main;

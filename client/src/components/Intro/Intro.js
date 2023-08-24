@@ -2,7 +2,6 @@ import React, {useRef, useEffect} from 'react';
 import logoImg from '../../Images/Logo.png';
 import downArrow from '../../Images/down-arrow.svg'
 import './Intro.css'
-import FollowMouseImage from './FollowMouseImage';
 
 const Intro = () => {
 
@@ -41,8 +40,9 @@ const Intro = () => {
     return (
         <div>
             <img className = "logo-image" src={logoImg} alt="" />
-            {/* <FollowMouseImage img={logoImg} /> */}
-            <img className = "arrow-styling" src={downArrow} alt="" />
+            <div>
+                <img className = "arrow-styling" src={downArrow} alt="" />
+            </div>
             <h1>WE ARE</h1>
             <p>A strategic communications firm led by professionals and staffed by students who are reimagining advertising and public relations.</p>
             <p>We're a team of bold students with an unparalleled motivation to the best work for anyone seeking it. We are researchers, managers, creatives and coordinators - but most of all, we are the ambitious youth setting the precedent in communications.</p>
