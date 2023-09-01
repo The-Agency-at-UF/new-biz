@@ -2,9 +2,11 @@ const Bliss = () => {
     const box = {
         color: "pink",
         backgroundColor: "lavenderblush",
-        width: "33.33%",
+        width: "100%",
         height: 500,
-        display: "inline-flex",
+        margin: "auto",
+        display: "block",
+        boxSizing: "border-box"
         
     }
 
