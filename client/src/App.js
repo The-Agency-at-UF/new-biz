@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Dropdown, getOption } from "./Dropdown/Dropdown";
-
+import Home from "./pages/Home";
 const API_BASE = "http://localhost:3001";
 // This line connects this front-end code to the server
 
@@ -48,7 +47,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Welcome</h1>
+      <Home></Home>
+      {/* <h1>Welcome</h1>
       <h2>Case Studies</h2>
       <h4>Case Study 1:</h4>
       <Dropdown order="1" handleSelection={handleSelection} />
@@ -56,7 +56,7 @@ const App = () => {
       <Dropdown order="2" handleSelection={handleSelection} />
       <h4>Case Study 3:</h4>
       <Dropdown order="3" handleSelection={handleSelection} />
-      <button onClick={loadNewSite}>Load New Site!</button>
+      <button onClick={loadNewSite}>Load New Site!</button> */}
 
       {/* <div className= "todos">
         {casestudies.map(todo => (

@@ -1,41 +1,26 @@
-/* :root {
-	--primary: #D81E5B;
-	--secondary: #8A4EFC;
-	--light: #EEE;
-	--light-alt: #61759b;
-	--dark: #131A26;
-	--dark-alt: #202B3E;
+:root {
+  --primary: #d81e5b;
+  --secondary: #8a4efc;
+  --light: #eee;
+  --light-alt: #61759b;
+  --dark: #131a26;
+  --dark-alt: #202b3e;
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Fira Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
 }
 
 body {
-	background-color: var(--dark-alt);
-	color: var(--light);
-}
+  /* background-color: var(--dark);
+  color: var(--light); */
 
-.App {
-	padding: 32px;
+  /* This is the background color of the main site */
+  background-color: black;
 }
-
-h1 {
-	font-size: 40px;
-	font-weight: 700;
-	margin-bottom: 32px;
-}
-
-h4 {
-	font-size: 18px;
-	color: var(--light-alt);
-	text-transform: uppercase;
-	font-weight: 400;
-	margin-bottom: 16px;
-} */
 
 /* .todo {
 	position: relative;
