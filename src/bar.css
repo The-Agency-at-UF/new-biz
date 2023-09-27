@@ -5,40 +5,35 @@ body {
     scrollbar-width: none; 
     overflow-y: scroll;
   }
-  
-  body::-webkit-scrollbar {
-    display: none;
-  }
-  
+
   .header h2 {
     text-align: center;
   }
   
   .progress-container {
+    display:flex; 
+    align-items: flex-end;
     position: fixed;
     top: 70px;
     bottom: 70px;
     right: 10px;
-    width: 8px;
+    width: 4px;
     height: 90%;    
-    background: transparent;
-    border-radius: 2px;
+    background: linear-gradient(to bottom, #FFB23E 2.08%, #FE4D55 50%, #AB9BFD 97.92%);
     margin: auto;
   }
   
   .progress-bar {
     width: 4px;
-    background: linear-gradient(to bottom, #FFB23E 2.08%, #FE4D55 50%, #AB9BFD 97.92%);
-    border-radius: 5px;
+    height: 100%;
+    background: black;
   }
   
   .progress-bar:before {
-    height: 1%;
+    height: 100%;
   }
   
   .wrapper {
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  
-  
