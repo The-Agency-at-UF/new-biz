@@ -9,7 +9,7 @@ import './bar.css';
 window.addEventListener('scroll', function() {
   // function for the progress bar
   const progressBar = document.getElementById("progressbar");
-  progressBar.style.height = 1 + "%";
+  progressBar.style.height = 100 + "%";
   
   window.onscroll = () => {
     const scroll = document.documentElement.scrollTop;
@@ -17,11 +17,12 @@ window.addEventListener('scroll', function() {
     let scrolled = (scroll / height) * 100;
   
     if (scrolled <= 1) {
-      progressBar.style.height = 1 + "%";
+      progressBar.style.height = 100 + "%";
     } 
     else if (scrolled >= 2 && scrolled <= 100) {
-      progressBar.style.height = scrolled + "%";
+      progressBar.style.height = (100-scrolled) + "%";
     }
+    console.log(100-scrolled);
   }
   
   // function for the menu
@@ -62,7 +63,7 @@ function App() {
         </ul>
       </div>
       <div id="section1">
-        <h1>Home - The Agency</h1>
+        <h1>The Agency</h1>
       </div>
       <div id="section2">
         <h1>About</h1>
