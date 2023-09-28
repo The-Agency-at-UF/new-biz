@@ -9,7 +9,11 @@ body {
   .header h2 {
     text-align: center;
   }
-  
+
+ body::-webkit-scrollbar {
+    display: none;
+  }
+
   .progress-container {
     display:flex; 
     align-items: flex-end;
