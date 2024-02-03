@@ -12,16 +12,13 @@ import alexa2 from '../../images/alexa2.png';
 import solutionTexts1 from '../../images/solution_texts1.png';
 import solutionTexts2 from '../../images/solution_texts2.png';
 import vector1 from '../../images/vector_1.png';
-import vector2 from '../../images/vector_2.png';
 import vector3 from '../../images/vector_3.png';
 import vector4 from '../../images/vector_4.png';
 import vector5 from '../../images/vector_5.png';
-import vector6 from '../../images/vector_6.png';
 import vector7 from '../../images/vector_7.png';
-import vector8 from '../../images/vector_8.png';
 
 
-const Practice = () => {
+const Alexa = () => {
   return (
     <div class="case-study-alexa">
           <img src={alexaLogo} alt="amazon alexa logo" id="alexa-logo"/>
@@ -167,4 +164,4 @@ const Practice = () => {
   )
 };
 
-export default Practice;
+export default Alexa;
