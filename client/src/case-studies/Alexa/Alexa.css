@@ -1,9 +1,9 @@
 /* Inspired by this pen by Pieter Biesemans https://codepen.io/pieter-biesemans/pen/BQBWXX and My Mother Before Me project http://mymotherbeforeme.com/ */
 
 .case-study-alexa {
-    background-color: #1D3C57;
     color: #FFFFFF;
     box-sizing: border-box;
+    max-height: 100vh;
 }
 
   /* hide scrollbar */
@@ -18,6 +18,7 @@
   }
   
   .horizontal-scroll-wrapper {
+    background-color: #1D3C57;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,7 +79,8 @@
   }
 
   #team {
-    margin-top: 100px;
+    margin-top: 110px;
+    margin-left: -150px;
   }
 
   #mario {
@@ -164,8 +166,8 @@
     height: 50px;
     flex-shrink: 0;
     text-align: center;
-    font-weight: 700;
-    padding-top: 2.5px;
+    font-weight: 800;
+    padding-top: 2px;
     margin-left: 75px;
     font-size: 1.5rem;
 } 
@@ -196,14 +198,18 @@
     padding-left: 15px;
 }
 
+.impact-list {
+  list-style-image: url('../../images/alexa_list.png');
+}
+
 li {
     font-weight: 400;
     font-family: 'Rubik', sans-serif;
     color: #FFFFFF;
     font-size: 22px;
-    margin-left: 200px;
+    margin-left: 150px;
     padding-top: 25px;
-    list-style-type: none;
+    list-style: none;
 }
 
 #alexa-logo {
@@ -212,6 +218,7 @@ li {
   top: 90px;
   left: 30px;
   position: relative;
+  z-index: 1;
 }
 
 #vector1 {
@@ -256,12 +263,13 @@ li {
 .block3 {
   position: relative;
   left: -450px;
-  margin-top: 0px;
+  margin-top: 30px;
 }
 
 .final {
   position: relative;
   margin-top: -500px;
+  margin-left: -30px;
 }
 
 #solution-texts-1 {

@@ -37,12 +37,12 @@ const Practice = () => {
         <h2 className="title">OUR TEAM</h2>
         <p className="text desc">14-person team of researchers, <br /> strategists & copywriters</p>
                 <ul>
-                  <li>Operations Manager</li>
-                  <li>Account Lead</li>
-                  <li>Project Manager</li>
-                  <li>Researcher</li>
-                  <li>Strategists</li>
-                  <li>Copywriters</li>
+                  <li>1 Operations Manager</li>
+                  <li>1 Account Lead</li>
+                  <li>1 Project Manager</li>
+                  <li>1 Researcher</li>
+                  <li>2 Strategists</li>
+                  <li>8 Copywriters</li>
                 </ul>
       </div>
     </div>
@@ -143,14 +143,14 @@ const Practice = () => {
     <div className="block block4">
               <h2 className="title">IMPACT</h2>
               <ul>
-                <li className="text body-text">
+                <li className="text body-text impact-list">
                   Generated insights on topics <br />
                   such as video games, music, <br />
                   anime and TV shows, to be used <br />
                   by the Amazon Alexa Personality <br />
                   Team for years to come
                 </li>
-                <li className="text body-text">
+                <li className="text body-text impact-list">
                   Wrote over <span className="bolded"> 250 approved <br />
                   responses</span>, which can be heard <br />
                   by millions around the world in <br />
