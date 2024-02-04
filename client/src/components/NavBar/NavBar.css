@@ -1,0 +1,32 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2em;
+    padding-left: 8em;
+    padding-right: 8em;
+    background: black;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: space-between; 
+  }
+  
+  .navbar.hidden {
+    transform: translateY(-100%);
+  }
+  
+  .navbar a {
+    margin-right: 15px;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #FFB23E 2.08%, #FE4D55 50%, #AB9BFD 97.92%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
