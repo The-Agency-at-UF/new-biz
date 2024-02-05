@@ -1,0 +1,25 @@
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 40px;
+}
+
+.image-wrapper{
+    max-width: 70%;
+    max-height: 80%;
+    padding: 10%;
+
+}
+
+.image{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hovered {
+    transform: rotateX(1deg) rotateY(1deg) rotateZ(1deg);
+}
