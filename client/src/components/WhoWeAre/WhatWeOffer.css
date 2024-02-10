@@ -1,0 +1,149 @@
+@font-face {
+    font-family: Gentona;
+    src: url(../../fonts/GentonaTT-Bold.ttf);
+}
+
+.container {
+    width: 100%;
+    margin: 0px auto;
+    height: 100vh;
+    color: white;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    height: 100%;
+    width: 500%; /* 5 sections */
+    flex-shrink: 0;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.slider section {
+    flex-basis: 20%; /* 100/5 =20 */
+    width: 20%;
+    flex-shrink: 0;
+    flex: 1;
+    display: flex;
+}
+
+.arrow {
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+}
+
+.arrow.prev {
+    left: 10px;
+}
+
+.arrow.next {
+    right: 10px;
+}
+
+.sliding-right {
+    transform: translate(-20%);
+}
+
+.sliding-left {
+    transform: translate(20%);
+}
+
+.not-sliding {
+    transform: translate(0%);
+}
+
+.no-transition {
+    transition: none;
+}
+
+.client-services {
+    background-color: #FFB23E;
+    position: relative;
+
+    h1 {
+        font-family: Gentona;
+        font-size: 80px;
+    }
+}
+
+.research {
+    background-color: #FE4D55;
+    position: relative;
+
+    h1 {
+        font-family: Gentona;
+        font-size: 80px;
+    }
+}
+
+.creative {
+    background-color: #AB9BFD;
+    position: relative;
+
+    h1 {
+        font-family: Gentona;
+        font-size: 80px;
+    }
+}
+
+.developer {
+    background-color: #5303D8;
+    position: relative;
+
+    h1 {
+        font-family: Gentona;
+        font-size: 80px;
+    }
+}
+
+.media {
+    background-color: #000000;
+    position: relative;
+
+    h1 {
+        font-family: Gentona;
+        font-size: 80px;
+    }
+}
+
+.section-title {
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    font-size: 40px;
+    font-family: Gentona;
+}
+
+.centered {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.roles {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-family: Gentona;
+    line-height: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    p {
+        margin: 1.4em;
+    }
+}
