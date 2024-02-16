@@ -43,10 +43,11 @@ body {
   }
   
   #section1 {
-	height: 1000px;
+	height: auto;
   }
   #section2 {
-	height: 1000px;
+	height: 100vh;
+  background-color: #FFF;
   }
   #section3 {
 	/* padding-top: 100px; */

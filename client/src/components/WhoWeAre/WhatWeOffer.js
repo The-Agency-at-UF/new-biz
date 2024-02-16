@@ -1,10 +1,12 @@
 import React, {useState} from "react";
 import "./WhatWeOffer.css";
+import prevarrow from '../../images/arrow-prev.png';
+import nextarrow from '../../images/arrow-next.png';
 
 
 const WhatWeOffer = () => {
     const [JC, setJC] = useState("flex-start");
-    const slider = document.getElementsByClassName('slider');
+    const slider = document.getElementsByClassName('slider-wwo');
     var direction = 1;
 
     const goNext = () => {
@@ -42,16 +44,18 @@ const WhatWeOffer = () => {
   return (
     <div className="container">
         <div className="carousel" style={{justifyContent: JC}}>
-            <div className="slider" onTransitionEnd={handleTransition}>
+            <div className="slider-wwo" onTransitionEnd={handleTransition}>
                 <section className="client-services">
                     <h2 className="section-title">WHAT WE OFFER</h2>
                     <div className="centered">
                         <h1>CLIENT SERVICES</h1>
                         <div className="roles">
-                            <p>Project Management</p>
-                            <p>Timelines</p>
-                            <p>Account Management</p>
-                            <p>Event Management</p>
+                            <p> <span>Project Management</span> 
+                            <span>Timelines</span>
+                            <span>Account Management</span>
+                            </p>
+
+                            <p> <span>Event Management</span> </p>
                         </div>
                     </div>
                 </section>
@@ -60,14 +64,21 @@ const WhatWeOffer = () => {
                         <div className="centered">
                             <h1>RESEARCH</h1>
                             <div className="roles">
-                                <p>Research & Strategy</p>
-                                <p>1:1, Focus Group, Panel</p>
-                                <p>Quantitative Research</p>
-                                <p>Analytics</p>
-                                <p>Message Testing</p>
-                                <p>Environmental Scanning</p>
-                                <p>Campaign Performance Tracking</p>
-                                <p>Product, Vertical or Media Audit</p>
+                                <p> <span>Research & Strategy</span>
+                                <span>1:1, Focus Group, Panel</span>
+                                </p>
+
+                                <p> <span>Analytics</span>
+                                    <span>Message Testing</span>
+                                    <span>Environmental Scanning</span>
+                                </p>
+
+                                <p> <span>Campaign Performance Tracking</span>
+                                    <span>Product, Vertical or Media Audit</span>
+                                </p>
+
+                                <p><span>Quantitative Research</span></p>
+                                
                             </div>
                         </div>
                 </section>
@@ -76,15 +87,20 @@ const WhatWeOffer = () => {
                         <div className="centered">
                             <h1>CREATIVE</h1>
                             <div className="roles">
-                                <p>Videography</p>
-                                <p>Photography</p>
-                                <p>Audio Production</p>
-                                <p>Marketing Assets</p>
-                                <p>Copywriting</p>
-                                <p>Graphic Design</p>
-                                <p>Experimental Marketing</p>
-                                <p>Ideation & Experimentation</p>
-                                <p>Concept Development</p>
+                                <p> <span>Videography</span>
+                                    <span>Photography</span>
+                                    <span>Audio Production</span>
+                                </p>
+                                
+                                <p> <span>Marketing Assets</span>
+                                    <span>Copywriting</span>
+                                    <span>Graphic Design</span>
+                                </p>
+                                
+                                <p> <span>Experimental Marketing</span>
+                                    <span>Ideation & Experimentation</span>
+                                </p>
+                                <p> <span>Concept Development</span></p>
                             </div>
                         </div>
                 </section>
@@ -93,7 +109,7 @@ const WhatWeOffer = () => {
                         <div className="centered">
                             <h1>DEVELOPER</h1>
                             <div className="roles">
-                                <p>Website Development</p>
+                                <p> <span>Website Development</span></p>
 
                             </div>
                         </div>
@@ -103,17 +119,19 @@ const WhatWeOffer = () => {
                         <div className="centered">
                             <h1>MEDIA</h1>
                             <div className="roles">
-                                <p>Content Creation</p>
-                                <p>Community Management</p>
-                                <p>Media Campaigns</p>
-                                <p>Social Media & Marketplace Pages</p>
+                                <p> <span>Content Creation</span>
+                                    <span>Community Management</span>
+                                    <span>Media Campaigns</span>
+                                </p>
+                                
+                                <p> <span>Social Media & Marketplace Pages</span> </p>
                             </div>
                         </div>
                 </section>
             </div>
             <div className="controls">
-                <span className="arrow prev" onClick={goPrev}>prev</span>
-                <span className="arrow next" onClick={goNext}>next</span>
+                <span className="arrow-wwo prev" onClick={goPrev}><img className="arrow-size" src={prevarrow}/></span>
+                <span className="arrow-wwo next" onClick={goNext}><img className="arrow-size" src={nextarrow}/></span>
             </div>
         </div>
     </div>
