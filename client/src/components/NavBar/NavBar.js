@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./NavBar.css";
+import ProgressBar from "../ProgressBar/ProgressBar";
 
 const NavBar = () => {
   const [isNavbarVisible, setNavbarVisible] = useState(true);
