@@ -20,9 +20,9 @@ const NavBar = () => {
 
   return (
     <div className={`navbar ${isNavbarVisible ? "visible" : "hidden"}`}>
-      <a href="#section1">Home</a>
-      <a href="#section2">About</a>
-      <a href="#section3">Our Team</a>
+      <a href="/">Home</a>
+      <a href="#section1">About</a>
+      <a href="#section2">Our Team</a>
       <a href="#section4">Case 1</a>
       <a href="#section5">Case 2</a>
       <a href="#section6">Case 3</a>
