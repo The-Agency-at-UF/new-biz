@@ -80,6 +80,10 @@
         font-family: Gentona;
         font-size: 80px;
     }
+
+    background-image: 
+    linear-gradient(to right, rgba(255,0,0,0) 88%, #FE7B4B),
+    linear-gradient(to left, rgba(255,0,0,0) 88%, #8B6122);
 }
 
 .research {
@@ -90,6 +94,10 @@
         font-family: Gentona;
         font-size: 80px;
     }
+
+    background-image: 
+    linear-gradient(to right, rgba(255,0,0,0) 88%, #D178B1),
+    linear-gradient(to left, rgba(255,0,0,0) 88%, #FE7B4B);
 }
 
 .creative {
@@ -100,6 +108,10 @@
         font-family: Gentona;
         font-size: 80px;
     }
+
+    background-image: 
+    linear-gradient(to right, rgba(255,0,0,0) 88%, #8356EC),
+    linear-gradient(to left, rgba(255,0,0,0) 88%, #D178B1);
 }
 
 .developer {
@@ -110,6 +122,10 @@
         font-family: Gentona;
         font-size: 80px;
     }
+
+    background-image: 
+    linear-gradient(to right, rgba(255,0,0,0) 88%, #350289),
+    linear-gradient(to left, rgba(255,0,0,0) 88%, #8356EC);
 }
 
 .media {
@@ -120,6 +136,10 @@
         font-family: Gentona;
         font-size: 80px;
     }
+
+    background-image: 
+    linear-gradient(to left, rgba(255,0,0,0) 88%, #350289),
+    linear-gradient(to right, rgba(255,0,0,0) 88%, #8B6122);
 }
 
 .section-title {
