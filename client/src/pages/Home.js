@@ -1,6 +1,5 @@
 // This is the main component we will add all other components to the site here
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./Home.css";
 import Banner from '../components/Banner/Banner';
 import Intro from '../components/Intro/Intro';

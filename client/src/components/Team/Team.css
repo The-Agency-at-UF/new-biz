@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-start; /* Start from the left side */
   flex-wrap: nowrap; /* Prevent wrapping */
-  gap: 20px; /* Add some spacing between team members */
+  gap: 100px; /* Add some spacing between team members */
 }
   
   .border-container{
@@ -89,7 +89,7 @@
     align-items: left;
     margin-left: -10%; 
     margin-top: 5%;
-    z-index: 2; 
+    z-index: 3; 
   }
   
   .text-container > * {

@@ -5,6 +5,13 @@ import NatalieCompany from '../../images/NatalieCompany.png';
 import Ashley from '../../images/ashley.png';
 import AshleyCompany from '../../images/ashleycompany.png';
 import AshleyBackground from '../../images/ashleybackground.png';
+import Mark from '../../images/mark.png';
+import MarkCompany from '../../images/markCompany.png';
+import MarkBackground from '../../images/markBackground.png';
+import Laurent from '../../images/laurent.png';
+import LaurentCompany from '../../images/laurentCompany.png';
+import LaurentBackground from '../../images/laurentBackground.png';
+
 
 
 import "./Team.css";
@@ -21,9 +28,82 @@ const Team = () => {
   };
 
 //   const imageToShow = isHovered ? Background2 : Background1;
+//hard coded for now 
 
   return (
     <div className="whole-container">
+    <div className="border-container">
+        <div
+          className="team-container"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+            <img src={Laurent} className="person" />
+      
+          <img
+            src={LaurentBackground}
+            alt="Hoverable Image"
+            className="hoverable-image"
+          />
+          <div className="text-container">
+            <div className="name-text">
+              LAURENT <br></br>
+              BURMAN
+            </div>
+            <div className="title-text">
+              Consulting Executive Director
+            </div>
+            <div className="about-text">
+              Prior to this role, he was the Global Chief Client Officer<br></br>
+              and Chief Growth Officer for WPP's POSSIBLE, a highly<br></br>
+              successful digital agency with 24 offices globally ( now<br></br>
+              Wunderman Thompson). Laurent has worked at P&G<br></br>
+              and Amazon as well as in senior leadership roles at <br></br>
+              several start-ups.
+            </div>
+            <div className="image-container">
+                <img
+                src={LaurentCompany}
+                />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="border-container">
+        <div
+          className="team-container"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+            <img src={Mark} className="person" />
+      
+          <img
+            src={MarkBackground}
+            alt="Hoverable Image"
+            className="hoverable-image"
+          />
+          <div className="text-container">
+            <div className="name-text">
+              MARK <br></br>
+              ROTTENSTEINER
+            </div>
+            <div className="title-text">
+              Accounts Director
+            </div>
+            <div className="about-text">
+              Prior to this role, Mark gained professional experience<br></br>
+              managing state campaigns and serving as an account<br></br>
+              coordinator at Washington, D.C. lobbying firm,<br></br>
+              Ballard Partners, on a foreign government account.<br></br>
+            </div>
+            <div className="image-container">
+                <img
+                src={MarkCompany}
+                />
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="border-container">
         <div
           className="team-container"

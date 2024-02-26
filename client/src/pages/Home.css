@@ -53,15 +53,11 @@ body {
 
   #section2 {
       padding-left: 10%;
+      height: fit-content;
   }
 
   .section2-header {
     text-align: left;
-  }
-
-  .team-section {
-    width: 60%; 
-    margin: 0 auto; 
   }
 
 
