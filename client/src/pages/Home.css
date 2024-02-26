@@ -41,17 +41,34 @@ body {
 	font-weight: 700;
 	line-height: normal;
   }
-  
+
+
+  .section {
+    padding: 50px 0; /* Adjust padding as needed */
+  }
+
   #section1 {
-	height: 1000px;
+  
   }
+
   #section2 {
-	height: 1000px;
+      padding-left: 10%;
   }
+
+  .section2-header {
+    text-align: left;
+  }
+
+  .team-section {
+    width: 60%; 
+    margin: 0 auto; 
+  }
+
+
   #section3 {
-	/* padding-top: 100px; */
-	height: 1000px;
+
   }
+
   #section4 {
 	height: 1000px;
   }
