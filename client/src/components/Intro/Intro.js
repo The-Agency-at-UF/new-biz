@@ -4,29 +4,38 @@ import { Fade, Zoom } from "react-awesome-reveal";
 import "./Intro.css";
 
 /*https://codesandbox.io/s/fxjve?file=/package.json*/
-document.addEventListener("DOMContentLoaded", function (event) {
-  document.addEventListener("scroll", function (event) {
-    const glowingTexts = document.getElementsByClassName("text-glow");
-    const windowOffsetTop = window.innerHeight + window.scrollY;
+// document.addEventListener("DOMContentLoaded", function (event) {
+//   document.addEventListener("scroll", function (event) {
+//     const glowingTexts = document.getElementsByClassName("text-glow");
+//     const windowOffsetTop = window.innerHeight + window.scrollY;
 
-    Array.prototype.forEach.call(glowingTexts, (glowingText) => {
-      const glowingTextOffsetTop = glowingText.offsetTop;
+//     Array.prototype.forEach.call(glowingTexts, (glowingText) => {
+//       const glowingTextOffsetTop = glowingText.offsetTop;
 
-      if (windowOffsetTop >= glowingTextOffsetTop) {
-        addClass(glowingText, "glow");
-      }
-    });
-  });
-});
+//       if (windowOffsetTop >= glowingTextOffsetTop) {
+//         addClass(glowingText, "glow");
+//       }
+//     });
+//   });
+// });
 
-function addClass(element, className) {
-  const arrayClasses = element.className.split(" ");
-  if (arrayClasses.indexOf(className) === -1) {
-    element.className += " " + className;
-  }
-}
+// function addClass(element, className) {
+//   const arrayClasses = element.className.split(" ");
+//   if (arrayClasses.indexOf(className) === -1) {
+//     element.className += " " + className;
+//   }
+// }
 
 const Intro = () => {
+  const scrollElement = useRef(null);
+
+  const handleClick = () => {
+    scrollElement.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  };
   return (
     <di className="main">
       <div className="logo-container">
@@ -34,8 +43,9 @@ const Intro = () => {
           <img className="logo-image" src={logoImg} alt="" />
         </Zoom>
       </div>
-      <div class="arrow"></div>
+      <div onClick={handleClick} class="arrow"></div>
 
+      <div ref={scrollElement} className="invisible-div"></div>
       <Fade direction="up">
         <h1>WE ARE</h1>
         <p>

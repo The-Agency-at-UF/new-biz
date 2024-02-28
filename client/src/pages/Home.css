@@ -41,7 +41,6 @@ h1 {
   font-weight: 700;
   line-height: normal;
 }
-
 #section1 {
   height: 1000px;
 }
@@ -49,7 +48,6 @@ h1 {
   height: 1000px;
 }
 #section3 {
-  /* padding-top: 100px; */
   height: 1000px;
 }
 #section4 {
@@ -63,21 +61,6 @@ h1 {
 }
 #section7 {
   height: 1000px;
-}
-
-.sections {
-  position: fixed;
-  right: 0px;
-}
-
-.nav-button {
-  font-size: 19px;
-  font-weight: 600;
-  text-align: center;
-  transform: rotate(-90deg);
-  margin-top: 70px;
-  padding-top: 5.5px;
-  padding-bottom: 5.5px;
 }
 
 .nav-1 {

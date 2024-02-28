@@ -10,7 +10,6 @@
   align-items: center;
   height: 100vh;
 }
-
 h1 {
   color: white;
   text-align: center;
@@ -45,6 +44,7 @@ p {
   border-top: none;
   border-right: 4px #fff solid;
   border-bottom: 4px #fff solid;
+  cursor: pointer;
 }
 
 .arrow:before {
@@ -52,7 +52,7 @@ p {
   width: 10px;
   height: 10px;
   top: 50%;
-  margin: -8px 0 0 -8px;
+  margin: -12px 0px 0px -12px;
   border-left: none;
   border-top: none;
   border-right: 2px #fff solid;

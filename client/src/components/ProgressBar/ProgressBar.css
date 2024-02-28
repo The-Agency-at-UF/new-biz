@@ -7,6 +7,27 @@ body {
   color: white;
 }
 
+.sections {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+}
+.nav-button {
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
+  transform: rotate(-90deg);
+  margin-top: 74px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  width: 100px;
+  height: 25px;
+}
+.nav-button-highlighted {
+  font-weight: 800;
+  font-size: 20px;
+}
+
 /* add this to github*/
 body::-webkit-scrollbar {
   display: none;

@@ -1,29 +1,37 @@
 // This is the main component we will add all other components to the site here
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import Banner from "../components/Banner/Banner";
 import Intro from "../components/Intro/Intro";
-import NavBar from "../components/NavBar/NavBar";
 import ProgressBar from "../components/ProgressBar/ProgressBar";
 
 const Home = () => {
+  const [current, setCurrent] = useState("section1");
+  let sections = document.querySelectorAll("div.section");
+  useEffect(() => {
+    sections = document.querySelectorAll("div.section");
+  }, []);
+
+  window.addEventListener("scroll", () => {
+    sections.forEach((section) => {
+      // get pixel value of section from the top of the page to the top of the section
+      const sectionTop = section.offsetTop;
+      // get pixel value of
+      const sectionHeight = section.clientHeight;
+      if (window.scrollY >= sectionTop - sectionHeight / 3) {
+        setCurrent(section.getAttribute("id"));
+      }
+    });
+  });
+
   return (
     <div>
-      <div className="sections">
-        <div className="nav-button nav-1">Home</div>
-        <div className="nav-button nav-2">About</div>
-        <div className="nav-button nav-3">Our Team</div>
-        <div className="nav-button nav-4">Case 1</div>
-        <div className="nav-button nav-5">Case 2</div>
-        <div className="nav-button nav-6">Case 3</div>
-        <div className="nav-button nav-7">End</div>
-      </div>
-      <ProgressBar />
-      <div id="section1">
+      <ProgressBar highlight={current} />
+      <div id="section1" className="section">
         <Intro />
       </div>
-      <div id="section2"></div>
-      <div id="section3">
+      <div id="section2" className="section"></div>
+      <div id="section3" className="section">
         <h1>Our Clients?</h1>
         <p className="paragraph">
           Fun way to phrase?? I know redpepper studio in Nashville says “we keep
@@ -33,16 +41,16 @@ const Home = () => {
         </p>
         <Banner />
       </div>
-      <div id="section4">
+      <div id="section4" className="section">
         <h1>Case 1</h1>
       </div>
-      <div id="section5">
+      <div id="section5" className="section">
         <h1>Case 2</h1>
       </div>
-      <div id="section6">
+      <div id="section6" className="section">
         <h1>Case 3</h1>
       </div>
-      <div id="section7">
+      <div id="section7" className="section">
         <h1>End</h1>
       </div>
     </div>
