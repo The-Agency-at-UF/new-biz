@@ -24,7 +24,7 @@ const ProgressBar = ({ highlight }) => {
     let scrolled = (scroll / height) * 100;
     if (scrolled >= 0) {
       document.getElementById("progressbar").style.height =
-        86.5 - scrolled + "%";
+        100 - scrolled + "%";
     }
   }, []);
 
@@ -40,14 +40,14 @@ const ProgressBar = ({ highlight }) => {
         document.documentElement.clientHeight;
       let scrolled = (scroll / height) * 100;
       if (scrolled >= 0) {
-        progressBar.style.height = 86.5 - scrolled + "%";
+        progressBar.style.height = 100 - scrolled + "%";
       }
     };
   });
 
   return (
     <div className="progress-container">
-      <div className="sections">
+      {/* <div className="sections">
         {sections.map((buttonName, index) => {
           if (Number(highlight.substring(7)) === index + 1) {
             return (
@@ -63,7 +63,7 @@ const ProgressBar = ({ highlight }) => {
             );
           }
         })}
-      </div>
+      </div> */}
       <div id="progressbar" className="progress-bar"></div>
     </div>
   );

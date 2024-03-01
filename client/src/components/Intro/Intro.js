@@ -36,8 +36,9 @@ const Intro = () => {
       inline: "nearest",
     });
   };
+
   return (
-    <di className="main">
+    <div className="main">
       <div className="logo-container">
         <Zoom triggerOnce>
           <img className="logo-image" src={logoImg} alt="" />
@@ -59,10 +60,10 @@ const Intro = () => {
           youth setting the precedent in communications.
         </p>
       </Fade>
-      <h1 className="text-glow">
+      <h1 className="text-glow glow">
         WE ILLUMINATE THE CULTURAL STAGE WITH GEN Z PASSION
       </h1>
-    </di>
+    </div>
   );
 };
 

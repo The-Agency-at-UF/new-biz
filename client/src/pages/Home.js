@@ -4,6 +4,7 @@ import "./Home.css";
 import Banner from "../components/Banner/Banner";
 import Intro from "../components/Intro/Intro";
 import ProgressBar from "../components/ProgressBar/ProgressBar";
+import NavBar from "../components/NavBar/NavBar";
 
 const Home = () => {
   const [current, setCurrent] = useState("section1");
@@ -26,7 +27,8 @@ const Home = () => {
 
   return (
     <div>
-      <ProgressBar highlight={current} />
+      <NavBar highlight={current}></NavBar>
+      <ProgressBar></ProgressBar>
       <div id="section1" className="section">
         <Intro />
       </div>
