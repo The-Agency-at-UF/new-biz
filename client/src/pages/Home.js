@@ -28,7 +28,8 @@ const Home = () => {
 
   return (
     <div>
-      <ProgressBar highlight={current} />
+      <NavBar highlight={current}></NavBar>
+      <ProgressBar></ProgressBar>
       <div id="section1" className="section">
         <Intro />
       </div>

@@ -12,7 +12,8 @@
   width: 1140px;
 }
 
-.slider::before, .slider::after {
+.slider::before,
+.slider::after {
   background: linear-gradient(to right, #000 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
   height: 100%;
@@ -37,7 +38,6 @@
   animation: scroll 40s linear infinite;
   display: flex;
   width: 500%;
-
 }
 
 /*.slider .slide-track:hover {
@@ -51,9 +51,9 @@
 
 @keyframes scroll {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-      transform: translateX(calc(-250px * 9));
+    transform: translateX(calc(-250px * 9));
   }
 }

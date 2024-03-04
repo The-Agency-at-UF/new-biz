@@ -23,10 +23,6 @@ body {
   width: 100px;
   height: 25px;
 }
-.nav-button-highlighted {
-  font-weight: 800;
-  font-size: 20px;
-}
 
 /* add this to github*/
 body::-webkit-scrollbar {
