@@ -1,80 +1,86 @@
 body {
-    margin: 0;
-    padding: 0;
-    -ms-overflow-style: none;
-    scrollbar-width: none; 
-    overflow-y: scroll;
-    color: white;
-  }
+  margin: 0;
+  padding: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  color: white;
+}
 
-  p {
-    text-align: center;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+p {
+  text-align: center;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 
-	color: #FFF;
-	font-family: Gentona;
-	font-size: 25px;
-	font-weight: 700;
-	line-height: normal;
-  }
+  color: #fff;
+  font-family: Gentona;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: normal;
+}
 
-  .header h2 {
-    text-align: center;
-  }
+.header h2 {
+  text-align: center;
+}
 
-  /* add this to github*/
-  body::-webkit-scrollbar {
-    display: none;
-  }
+/* add this to github*/
+body::-webkit-scrollbar {
+  display: none;
+}
+h1 {
+  text-align: center;
+  margin: auto;
 
-  h1 {
-	text-align: center;
-	margin: auto;
-  
-	color: #FFF;
-	font-family: Gentona;
-	font-size: 40px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-  }
+  color: #fff;
+  font-family: Gentona;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
 
+#section1 {
+  height: 1000px;
+}
+#section2 {
+  height: 1000px;
+}
+#section3 {
+  height: 1000px;
+}
+#section4 {
+  height: 1000px;
+}
+#section5 {
+  height: 1000px;
+}
+#section6 {
+  height: 1000px;
+}
+#section7 {
+  height: 1000px;
+}
 
-  .section {
-    padding: 50px 0; /* Adjust padding as needed */
-  }
-
-  #section1 {
-  
-  }
-
-  #section2 {
-      padding-left: 10%;
-      height: fit-content;
-  }
-
-  .section2-header {
-    text-align: left;
-  }
-
-
-  #section3 {
-
-  }
-
-  #section4 {
-	height: 1000px;
-  }
-  #section5 {
-	height: 1000px;
-  }
-  #section6 {
-	height: 1000px;
-  }
-  #section7 {
-	height: 1000px;
-  }
-  
+.nav-1 {
+  color: rgb(243, 171, 87);
+}
+.nav-2 {
+  color: rgb(240, 143, 88);
+}
+.nav-3 {
+  color: rgb(237, 115, 90);
+}
+.nav-4 {
+  color: rgb(233, 93, 96);
+}
+.nav-5 {
+  color: rgb(214, 112, 142);
+}
+.nav-6 {
+  color: rgb(193, 131, 189);
+}
+.nav-7 {
+  color: rgb(173, 151, 236);
+}

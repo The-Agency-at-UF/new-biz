@@ -1,37 +1,30 @@
-* {
-  z-index: 0;
+.logo-image {
+  max-width: 50%;
+  max-height: 60%;
+  display: block;
+  margin: auto;
+  margin-top: -40px;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 5vw;
+  padding: 3%;
+  margin: auto;
 }
 
-.logo-image{
-    max-width: 50%;
-    max-height: 60%;
-    padding: 10%;
-    display: block;
-    margin: auto;
-}
-
-.arrow-styling{
-    max-width: 3%;
-    max-height: 3%;
-    display: block;
-    margin: auto;
-}
-
-h1{
-    color: white;
-    text-align: center;
-    font-size: 5vw;
-    padding: 3%;
-    margin: auto;
-}
-
-p{
-    color: white;
-    text-align: center;
-    font-size: 2vw;
-    inline-size: 60%;
-    padding: 2%;
-    margin: auto;
+p {
+  color: white;
+  text-align: center;
+  font-size: 2vw;
+  inline-size: 60%;
+  padding: 2%;
+  margin: auto;
 }
 
 /*https://codepen.io/JoshMac/pen/MaYEmJ*/
@@ -39,26 +32,27 @@ p{
 .arrow,
 .arrow:before {
   position: absolute;
-  left: 50%
+  right: 50%;
 }
 
 .arrow {
   width: 20px;
   height: 20px;
-  margin: -20px 0 0 -20px;
+  margin: -50px 0 0 -50px;
   transform: rotate(45deg);
   border-left: none;
   border-top: none;
   border-right: 4px #fff solid;
   border-bottom: 4px #fff solid;
+  cursor: pointer;
 }
-  
+
 .arrow:before {
-  content: '';
+  content: "";
   width: 10px;
   height: 10px;
   top: 50%;
-  margin: -8px 0 0 -8px;
+  margin: -12px 0px 0px -12px;
   border-left: none;
   border-top: none;
   border-right: 2px #fff solid;
@@ -67,14 +61,14 @@ p{
   animation-iteration-count: infinite;
   animation-name: arrow;
 }
-  
+
 @keyframes arrow {
   0% {
-    opacity: 1
+    opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: translate(-10px, -10px)
+    transform: translate(-10px, -10px);
   }
 }
 
@@ -84,20 +78,20 @@ p{
 }
 
 .glow {
-    animation-name: glow;
-    animation-duration: 5s;
-    animation-delay: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
+  animation-name: glow;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
 }
 
 @keyframes glow {
   from {
-    text-shadow:0px 0px 0px #fff,0px 0px 0px #FFFFFF;
+    text-shadow: 0px 0px 0px #fff, 0px 0px 0px #ffffff;
   }
   to {
-    text-shadow:0px 0px 5px #AB9BFD,0px 0px 15px #AB9BFD;
+    text-shadow: 0px 0px 10px #9d8aff, 0px 0px 20px #9d8aff;
   }
 }

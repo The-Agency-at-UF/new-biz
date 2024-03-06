@@ -1,42 +1,59 @@
 body {
-    margin: 0;
-    padding: 0;
-    -ms-overflow-style: none;
-    scrollbar-width: none; 
-    overflow-y: scroll;
-    color: white;
-  }
+  margin: 0;
+  padding: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  color: white;
+}
 
-  /* add this to github*/
-  body::-webkit-scrollbar {
-    display: none;
-  }
+.sections {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+}
+.nav-button {
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
+  transform: rotate(-90deg);
+  margin-top: 74px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  width: 100px;
+  height: 25px;
+}
 
-  .progress-container {
-    display:flex; 
-    align-items: flex-end;
-    position: fixed;
-    top: 70px;
-    bottom: 70px;
-    right: 10px;
-    width: 4px;
-    height: 90%;    
-    background: linear-gradient(to bottom, #FFB23E 2.08%, #FE4D55 50%, #AB9BFD 97.92%);
-    margin: auto;
-    z-index: 30;
-  }
-  
-  .progress-bar {
-    width: 4px;
-    height: 100%;
-    background: black;
-  }
-  
-  .progress-bar:before {
-    height: 100%;
-  }
-  
-  .wrapper {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+/* add this to github*/
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.progress-container {
+  display: flex;
+  align-items: flex-end;
+  position: fixed;
+  top: 70px;
+  bottom: 70px;
+  right: 10px;
+  width: 4px;
+  height: 90%;
+  background: linear-gradient(
+    to bottom,
+    #ffb23e 2.08%,
+    #fe4d55 50%,
+    #ab9bfd 97.92%
+  );
+  margin: auto;
+  z-index: 30;
+}
+
+.progress-bar {
+  width: 4px;
+  height: 86.5%;
+  background: black;
+}
+
+.progress-bar:before {
+  height: 85%;
+}
