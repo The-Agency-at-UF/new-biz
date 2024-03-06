@@ -1,10 +1,11 @@
 // This is the main component we will add all other components to the site here
 import React, { useEffect, useState } from "react";
 import "./Home.css";
-import Banner from "../components/Banner/Banner";
-import Intro from "../components/Intro/Intro";
-import ProgressBar from "../components/ProgressBar/ProgressBar";
-import NavBar from "../components/NavBar/NavBar";
+import Banner from '../components/Banner/Banner';
+import Intro from '../components/Intro/Intro';
+import NavBar from '../components/NavBar/NavBar';
+import ProgressBar from '../components/ProgressBar/ProgressBar';
+import Team from '../components/Team/Team';
 
 const Home = () => {
   const [current, setCurrent] = useState("section1");
