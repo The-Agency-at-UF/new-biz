@@ -9,8 +9,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // This line connects this front-end code to the server
 
 const App = () => {
-  
-
   return (
     <Router>
       <Routes>

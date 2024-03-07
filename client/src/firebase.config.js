@@ -1,13 +1,13 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp, firebase } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import {getAuth} from "firebase/auth";
+import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-import {getStorage} from "firebase/storage";
+import { getStorage } from "firebase/storage";
 import "firebase/auth";
 import "firebase/storage";
 
-require('firebase/auth')
+require("firebase/auth");
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -19,7 +19,7 @@ const firebaseConfig = {
   projectId: process.env.REACT_APP_PROJECT_ID,
   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID
+  appId: process.env.REACT_APP_APP_ID,
 };
 
 // Initialize Firebase
@@ -28,4 +28,4 @@ const storage = getStorage(app);
 const db = getFirestore(app);
 const auth = getAuth(app);
 
-export {storage, auth, db};
+export { storage, auth, db };
