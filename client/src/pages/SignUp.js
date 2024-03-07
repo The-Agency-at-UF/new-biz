@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react";
-import { db, auth } from "../firebase.config";
+import React, { useState } from "react";
+import { auth } from "../firebase.config";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import {
   Avatar,
@@ -13,7 +13,6 @@ import {
   Container,
 } from "@mui/material";
 
-import { doc, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
 function SignUp() {
@@ -30,9 +29,6 @@ function SignUp() {
       .then(async (result) => {
         console.log(result);
         try {
-          const isAdmin = false;
-          const ref = doc(db, "users", result.user.uid);
-          const docRef = await setDoc(ref, { email, Name, isAdmin });
           // alert("YEEEEE"); LMAO
           console.log("Succeffully created user and stored something");
           navigate("/admin"); // Redirect to admin page on successful sign-up

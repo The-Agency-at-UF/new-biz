@@ -5,7 +5,6 @@ import Banner from "../components/Banner/Banner";
 import Intro from "../components/Intro/Intro";
 import NavBar from "../components/NavBar/NavBar";
 import ProgressBar from "../components/ProgressBar/ProgressBar";
-import Team from "../components/Team/Team";
 
 const Home = () => {
   const [current, setCurrent] = useState("section1");

@@ -2,11 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./Admin.css";
 import { auth, db } from "../firebase.config";
 import {
-  Avatar,
   Button,
   CssBaseline,
   TextField,
-  Demo,
   List,
   Grid,
   Box,
@@ -101,7 +99,7 @@ function Admin() {
 
     const caseStudyData = {
       userId: authUser.uid, // Include the user's UID for reference
-      company: company,
+      company: company.toLowerCase(),
       caseStudies: [dropdownOne, dropdownTwo, dropdownThree],
     };
 

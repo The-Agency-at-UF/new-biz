@@ -1,47 +1,50 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 import Test1 from "./Test1";
 import Test2 from "./Test2";
 import Test3 from "./Test3";
-import { db } from "../../firebase.config";
-import { collection, doc, getDoc } from "firebase/firestore";
 
+// import all case study components/pages
+import { db } from "../../firebase.config";
+import { doc, getDoc } from "firebase/firestore";
 
 const CaseStudy = () => {
-    const { caseStudyId } = useParams();
+  const { caseStudyId } = useParams();
 
-    //array of case studies names
-    // const caseStudies = ["test1", "test2", "test3"];
-    const [cases, setCases] = useState([]);
+  const [caseStudies, setCaseStudies] = useState([]);
 
-    useEffect(() => {
-        const fetchCase = async() => {
-            const caseRef = doc(db, `casestudy/${caseStudyId}`);
-            const docSnap = await getDoc(caseRef);
+  // list of all available case studies ready to render
+  // key must match what is in the database
+  const caseStudyTags = {
+    test1: Test1,
+    test2: Test2,
+    test3: Test3,
+  };
 
-            if (docSnap.exists()) {
-                console.log("Document data:", docSnap.data());
+  useEffect(() => {
+    const fetchCase = async () => {
+      const caseRef = doc(db, "casestudy", caseStudyId);
+      const docSnap = await getDoc(caseRef);
 
-                await setCases(docSnap.data().case);
-            }
-            else {
-                console.log("No such document!");
-            }
-            console.log(cases);
-        }
-        fetchCase();
-    }, [caseStudyId]);
+      if (docSnap.exists()) {
+        setCaseStudies(docSnap.data().caseStudies);
+      } else {
+        // handle url not pointing to document in DB
+        console.log("No such document!");
+      }
+    };
+    fetchCase();
+  }, [caseStudyId]);
 
-
-    return (
-        <div>
-            <h1>CASE STUDY</h1>
-            {cases.includes('Test1') && <Test1 />}
-            {cases.includes('Test2') && <Test2 />}
-            {cases.includes('Test3') && <Test3 />}
-        </div>
-
-    );
-}
+  return (
+    <div>
+      <h1>CASE STUDY</h1>
+      {caseStudies.map((caseName, index) => {
+        const SpecificCaseStudy = caseStudyTags[caseName];
+        return SpecificCaseStudy ? <SpecificCaseStudy key={index} /> : null;
+      })}
+    </div>
+  );
+};
 
 export default CaseStudy;
