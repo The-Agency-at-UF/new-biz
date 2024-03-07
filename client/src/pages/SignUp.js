@@ -17,9 +17,9 @@ import { doc, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
 function SignUp() {
-  const [email, setEmail] = React.useState("");
-  const [password, setPassword] = React.useState("");
-  const [Name, setName] = React.useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [Name, setName] = useState("");
 
   const [toggleError, setToggleError] = useState(false);
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ function SignUp() {
           const isAdmin = false;
           const ref = doc(db, "users", result.user.uid);
           const docRef = await setDoc(ref, { email, Name, isAdmin });
-          // alert("YEEEEE");
+          // alert("YEEEEE"); LMAO
           console.log("Succeffully created user and stored something");
           navigate("/admin"); // Redirect to admin page on successful sign-up
         } catch (e) {

@@ -6,21 +6,30 @@ import {
   Button,
   CssBaseline,
   TextField,
-  Link,
+  Demo,
+  List,
   Grid,
   Box,
   Typography,
   Container,
   MenuItem,
 } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import DeleteIcon from "@mui/icons-material/Delete";
+import ListItem from "@mui/material/ListItem";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import ListItemText from "@mui/material/ListItemText";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import UnpublishedIcon from "@mui/icons-material/Unpublished";
-import { collection, doc, getDoc } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
 function Admin() {
   const [authUser, setAuthUser] = useState(null);
   const [isAdmin, setIsAdmin] = useState(false);
+  const [caseStudies, setCaseStudies] = useState([]);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -49,10 +58,22 @@ function Admin() {
         .catch((error) => {
           console.log("Error getting document:", error);
         });
+
+      const fetchCaseStudies = async () => {
+        const querySnapshot = await getDocs(collection(db, "casestudy"));
+        const caseStudyList = [];
+        querySnapshot.forEach((doc) => {
+          // Assuming each document has a 'name' field you want to display
+          caseStudyList.push({ id: doc.id, company: doc.data().company });
+        });
+        setCaseStudies(caseStudyList);
+      };
+
+      fetchCaseStudies().catch(console.error);
     } else {
       console.log("No user signed in");
     }
-  }, [authUser]);
+  }, [authUser, caseStudies]);
 
   const handleSignOut = () => {
     auth
@@ -67,10 +88,39 @@ function Admin() {
       });
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (!authUser || !isAdmin) {
+      console.log("Unauthorized attempt to submit data");
+      return;
+    }
+    // check if the company is empty
+    // format company to all lowercase
+
+    const caseStudyRef = doc(db, "casestudy", company);
+
+    const caseStudyData = {
+      userId: authUser.uid, // Include the user's UID for reference
+      company: company,
+      caseStudies: [dropdownOne, dropdownTwo, dropdownThree],
+    };
+
+    setDoc(caseStudyRef, caseStudyData)
+      .then(() => {
+        console.log("Submission successfully saved!");
+        // Here you can add any follow-up actions after successful submission,
+        // such as redirecting the user or showing a success message
+      })
+      .catch((error) => {
+        console.error("Error saving submission: ", error);
+      });
+  };
+
   // State hooks for each dropdown selection
   const [dropdownOne, setDropdownOne] = useState("");
   const [dropdownTwo, setDropdownTwo] = useState("");
   const [dropdownThree, setDropdownThree] = useState("");
+  const [company, setCompany] = useState("");
 
   // Example options for dropdowns (you can replace these with your actual data)
   const optionsOne = ["Option 1", "Option 2", "Option 3"];
@@ -83,7 +133,7 @@ function Admin() {
         backgroundColor: "white",
       }}
       component="main"
-      maxWidth="sm"
+      maxWidth="lg"
     >
       <CssBaseline />
       <Box
@@ -127,72 +177,187 @@ function Admin() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            gap: 4, // Adjust this value as needed
           }}
         >
           <Typography sx={{ color: "black", mb: 3 }} variant="h4">
             Dashboard
           </Typography>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                id="dropdown-one"
-                select
-                label="Dropdown One"
-                value={dropdownOne}
-                onChange={(e) => setDropdownOne(e.target.value)}
-                variant="outlined"
-              >
-                {optionsOne.map((option) => (
-                  <MenuItem key={option} value={option}>
-                    {option}
-                  </MenuItem>
-                ))}
-              </TextField>
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                id="dropdown-two"
-                select
-                label="Dropdown Two"
-                value={dropdownTwo}
-                onChange={(e) => setDropdownTwo(e.target.value)}
-                variant="outlined"
-              >
-                {optionsTwo.map((option) => (
-                  <MenuItem key={option} value={option}>
-                    {option}
-                  </MenuItem>
-                ))}
-              </TextField>
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                id="dropdown-three"
-                select
-                label="Dropdown Three"
-                value={dropdownThree}
-                onChange={(e) => setDropdownThree(e.target.value)}
-                variant="outlined"
-              >
-                {optionsThree.map((option) => (
-                  <MenuItem key={option} value={option}>
-                    {option}
-                  </MenuItem>
-                ))}
-              </TextField>
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={handleSignOut}
-                sx={{ mt: 5 }}
-              >
-                Generate link
-              </Button>
-            </Grid>
-          </Grid>
+
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row", // Changed to column for a vertical layout of the Grids
+              gap: 15, // You can also add gap here if you want space between Grids inside this Box
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column", // Changed to column for a vertical layout of the Grids
+                alignItems: "center",
+                gap: 2, // You can also add gap here if you want space between Grids inside this Box
+              }}
+            >
+              <Grid sx={{ width: "100%", maxWidth: 500 }} container spacing={2}>
+                <Grid item xs={12}>
+                  <Typography sx={{ color: "black", mb: 3 }} variant="h5">
+                    Generate link
+                  </Typography>
+                  <TextField
+                    fullWidth
+                    id="company"
+                    label="Company"
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
+                    variant="outlined"
+                  ></TextField>
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    fullWidth
+                    id="dropdown-one"
+                    select
+                    label="Case Study 1"
+                    value={dropdownOne}
+                    onChange={(e) => setDropdownOne(e.target.value)}
+                    variant="outlined"
+                  >
+                    {optionsOne.map((option) => (
+                      <MenuItem key={option} value={option}>
+                        {option}
+                      </MenuItem>
+                    ))}
+                  </TextField>
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    fullWidth
+                    id="dropdown-two"
+                    select
+                    label="Case Study 2"
+                    value={dropdownTwo}
+                    onChange={(e) => setDropdownTwo(e.target.value)}
+                    variant="outlined"
+                  >
+                    {optionsTwo.map((option) => (
+                      <MenuItem key={option} value={option}>
+                        {option}
+                      </MenuItem>
+                    ))}
+                  </TextField>
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    fullWidth
+                    id="dropdown-three"
+                    select
+                    label="Case Study 3"
+                    value={dropdownThree}
+                    onChange={(e) => setDropdownThree(e.target.value)}
+                    variant="outlined"
+                  >
+                    {optionsThree.map((option) => (
+                      <MenuItem key={option} value={option}>
+                        {option}
+                      </MenuItem>
+                    ))}
+                  </TextField>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={handleSubmit}
+                    sx={{ mt: 5 }}
+                  >
+                    Generate
+                  </Button>
+                </Grid>
+              </Grid>
+            </Box>
+
+            <Box>
+              <Grid container spacing={2}>
+                <Grid item xs={12}>
+                  <Typography sx={{ color: "black", mb: 3 }} variant="h5">
+                    Active links
+                  </Typography>
+                  <List>
+                    {caseStudies.map((caseStudy) => (
+                      <ListItem
+                        key={caseStudy.userId}
+                        sx={{ mb: 1 }}
+                        secondaryAction={
+                          <IconButton edge="end" aria-label="delete">
+                            <DeleteIcon />
+                          </IconButton>
+                        }
+                      >
+                        <ListItemAvatar>
+                          <IconButton>
+                            <ContentCopyIcon />
+                          </IconButton>
+                        </ListItemAvatar>
+                        <ListItemText
+                          primary={
+                            caseStudy.company.charAt(0).toUpperCase() +
+                            caseStudy.company.slice(1)
+                          }
+                        />
+                      </ListItem>
+                    ))}
+                    {/* 
+                    <ListItem
+                      sx={{ mb: 1 }}
+                      secondaryAction={
+                        <IconButton edge="end" aria-label="delete">
+                          <DeleteIcon />
+                        </IconButton>
+                      }
+                    >
+                      <ListItemAvatar>
+                        <Avatar>
+                          <ApartmentIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText
+                        primary="Single-line item"
+                        secondary={secondary ? "Secondary text" : null}
+                      />
+                    </ListItem>
+                    <ListItem
+                      sx={{ mb: 1 }}
+                      secondaryAction={
+                        <IconButton edge="end" aria-label="delete">
+                          <DeleteIcon />
+                        </IconButton>
+                      }
+                    >
+                      <ListItemAvatar>
+                        <Avatar>
+                          <ApartmentIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText
+                        primary="Single-line item"
+                        secondary={secondary ? "Secondary text" : null}
+                      />
+                    </ListItem> */}
+                  </List>
+                </Grid>
+
+                <Grid item xs={12}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={handleSubmit}
+                    sx={{ mt: 3 }}
+                  >
+                    Generate
+                  </Button>
+                </Grid>
+              </Grid>
+            </Box>
+          </Box>
         </Box>
       ) : (
         <Box
