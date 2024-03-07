@@ -20,7 +20,14 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemText from "@mui/material/ListItemText";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import UnpublishedIcon from "@mui/icons-material/Unpublished";
-import { collection, doc, getDoc, getDocs, setDoc } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  setDoc,
+  deleteDoc,
+} from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
 function Admin() {
@@ -95,12 +102,16 @@ function Admin() {
     // check if the company is empty
     // format company to all lowercase
 
-    const caseStudyRef = doc(db, "casestudy", company);
+    const caseStudyRef = doc(db, "casestudy", company.toLowerCase());
 
     const caseStudyData = {
       userId: authUser.uid, // Include the user's UID for reference
       company: company.toLowerCase(),
-      caseStudies: [dropdownOne, dropdownTwo, dropdownThree],
+      caseStudies: [
+        dropdownOne.toLowerCase(),
+        dropdownTwo.toLowerCase(),
+        dropdownThree.toLowerCase(),
+      ],
     };
 
     setDoc(caseStudyRef, caseStudyData)
@@ -114,6 +125,33 @@ function Admin() {
       });
   };
 
+  const handleDeleteLink = async (docName) => {
+    try {
+      // Assuming docName is the document's ID
+      const docRef = doc(db, "casestudy", docName);
+
+      // Delete the document
+      await deleteDoc(docRef);
+
+      console.log("Document successfully deleted!");
+    } catch (error) {
+      console.error("Error removing document: ", error);
+    }
+  };
+
+  const copyTextToClipboard = async (text) => {
+    if ("clipboard" in navigator) {
+      try {
+        await navigator.clipboard.writeText(text);
+        alert("Text copied to clipboard");
+      } catch (err) {
+        console.error("Failed to copy: ", err);
+      }
+    } else {
+      console.error("Clipboard not available");
+    }
+  };
+
   // State hooks for each dropdown selection
   const [dropdownOne, setDropdownOne] = useState("");
   const [dropdownTwo, setDropdownTwo] = useState("");
@@ -121,9 +159,9 @@ function Admin() {
   const [company, setCompany] = useState("");
 
   // Example options for dropdowns (you can replace these with your actual data)
-  const optionsOne = ["Option 1", "Option 2", "Option 3"];
-  const optionsTwo = ["Option A", "Option B", "Option C"];
-  const optionsThree = ["Item X", "Item Y", "Item Z"];
+  const optionsOne = ["Uber", "Amazon", "Google", "Michelob", "Test"];
+  const optionsTwo = ["Uber", "Amazon", "Google", "Michelob", "Test"];
+  const optionsThree = ["Uber", "Amazon", "Google", "Michelob", "Test"];
 
   return (
     <Container
@@ -273,86 +311,58 @@ function Admin() {
               </Grid>
             </Box>
 
-            <Box>
+            <Box sx={{ width: "300px" }}>
               <Grid container spacing={2}>
                 <Grid item xs={12}>
                   <Typography sx={{ color: "black", mb: 3 }} variant="h5">
                     Active links
                   </Typography>
                   <List>
-                    {caseStudies.map((caseStudy) => (
-                      <ListItem
-                        key={caseStudy.userId}
-                        sx={{ mb: 1 }}
-                        secondaryAction={
-                          <IconButton edge="end" aria-label="delete">
-                            <DeleteIcon />
-                          </IconButton>
-                        }
-                      >
-                        <ListItemAvatar>
-                          <IconButton>
-                            <ContentCopyIcon />
-                          </IconButton>
-                        </ListItemAvatar>
-                        <ListItemText
-                          primary={
-                            caseStudy.company.charAt(0).toUpperCase() +
-                            caseStudy.company.slice(1)
+                    {caseStudies.length !== 0 ? (
+                      caseStudies.map((caseStudy, index) => (
+                        <ListItem
+                          key={index}
+                          sx={{ mb: 1 }}
+                          secondaryAction={
+                            <IconButton
+                              onClick={() =>
+                                handleDeleteLink(caseStudy.company)
+                              }
+                              edge="end"
+                              aria-label="delete"
+                            >
+                              <DeleteIcon />
+                            </IconButton>
                           }
-                        />
-                      </ListItem>
-                    ))}
-                    {/* 
-                    <ListItem
-                      sx={{ mb: 1 }}
-                      secondaryAction={
-                        <IconButton edge="end" aria-label="delete">
-                          <DeleteIcon />
-                        </IconButton>
-                      }
-                    >
-                      <ListItemAvatar>
-                        <Avatar>
-                          <ApartmentIcon />
-                        </Avatar>
-                      </ListItemAvatar>
-                      <ListItemText
-                        primary="Single-line item"
-                        secondary={secondary ? "Secondary text" : null}
-                      />
-                    </ListItem>
-                    <ListItem
-                      sx={{ mb: 1 }}
-                      secondaryAction={
-                        <IconButton edge="end" aria-label="delete">
-                          <DeleteIcon />
-                        </IconButton>
-                      }
-                    >
-                      <ListItemAvatar>
-                        <Avatar>
-                          <ApartmentIcon />
-                        </Avatar>
-                      </ListItemAvatar>
-                      <ListItemText
-                        primary="Single-line item"
-                        secondary={secondary ? "Secondary text" : null}
-                      />
-                    </ListItem> */}
+                        >
+                          <ListItemAvatar>
+                            <IconButton
+                              onClick={() =>
+                                copyTextToClipboard(
+                                  `IDKTHEURL.com/${caseStudy.company}`
+                                )
+                              }
+                            >
+                              <ContentCopyIcon />
+                            </IconButton>
+                          </ListItemAvatar>
+                          <ListItemText
+                            primary={
+                              caseStudy.company.charAt(0).toUpperCase() +
+                              caseStudy.company.slice(1)
+                            }
+                          />
+                        </ListItem>
+                      ))
+                    ) : (
+                      <Typography sx={{ color: "black" }}>
+                        No active links
+                      </Typography>
+                    )}
                   </List>
                 </Grid>
 
-                <Grid item xs={12}>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={handleSubmit}
-                    sx={{ mt: 3 }}
-                  >
-                    Generate
-                  </Button>
-                </Grid>
+                <Grid item xs={12}></Grid>
               </Grid>
             </Box>
           </Box>

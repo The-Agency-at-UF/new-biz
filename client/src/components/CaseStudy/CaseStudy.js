@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Test1 from "./Test1";
-import Test2 from "./Test2";
-import Test3 from "./Test3";
+import Amazon from "./Amazon";
+import Google from "./Google";
+import Uber from "./Uber";
+import Test from "./Test";
+import Michelob from "./Michelob";
 
 // import all case study components/pages
 import { db } from "../../firebase.config";
@@ -16,9 +18,11 @@ const CaseStudy = () => {
   // list of all available case studies ready to render
   // key must match what is in the database
   const caseStudyTags = {
-    test1: Test1,
-    test2: Test2,
-    test3: Test3,
+    google: Google,
+    michelob: Michelob,
+    test: Test,
+    uber: Uber,
+    amazon: Amazon,
   };
 
   useEffect(() => {
