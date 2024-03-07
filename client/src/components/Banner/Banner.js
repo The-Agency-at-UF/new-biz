@@ -1,12 +1,9 @@
-import './Banner.css';
-import logos from '../../images/logos_banner.png'
+import "./Banner.css";
+import logos from "../../images/logos_banner.png";
 
-
-const images = [
-  logos, logos, logos, logos
-].map((image) => ({
+const images = [logos, logos, logos, logos].map((image) => ({
   id: crypto.randomUUID(),
-  image
+  image,
 }));
 
 const Banner = () => {

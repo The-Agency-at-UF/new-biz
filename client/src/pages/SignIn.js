@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { auth } from "../../firebase.config";
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { useNavigate } from 'react-router-dom'; 
+import React, { useState, useEffect } from "react";
+import { auth } from "../firebase.config";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Link from "@mui/material/Link";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 function SignIn() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [authUser, setAuthUser] = useState(null);
   const navigate = useNavigate();
 
-  useEffect(() => {    
+  useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setAuthUser(user);
     });
@@ -36,7 +36,7 @@ function SignIn() {
         const user = userCredential.user;
         console.log(user);
         console.log("WE IN");
-        navigate('/admin'); // Redirect to admin page on successful sign-in
+        navigate("/admin"); // Redirect to admin page on successful sign-in
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -45,22 +45,35 @@ function SignIn() {
         console.log(errorMessage);
       });
   };
-    
+
   const handleSignOut = () => {
-    auth.signOut().then(() => {
-      console.log("Sign out successful");
-      setAuthUser(null);
-    }).catch((error) => {
-      console.log("Error signing out");
-    });
-  }
+    auth
+      .signOut()
+      .then(() => {
+        console.log("Sign out successful");
+        setAuthUser(null);
+      })
+      .catch((error) => {
+        console.log("Error signing out");
+      });
+  };
 
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
-      <Box sx={{ marginTop: 8, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }} />
-        <Typography variant="h4" sx={{ fontFamily: 'helvetica', fontWeight: 500, color: 'black' }}>
+      <Box
+        sx={{
+          marginTop: 8,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <Avatar sx={{ m: 1, bgcolor: "secondary.main" }} />
+        <Typography
+          variant="h4"
+          sx={{ fontFamily: "helvetica", fontWeight: 500, color: "black" }}
+        >
           Sign in
         </Typography>
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
@@ -105,12 +118,14 @@ function SignIn() {
           </Link>
         </Box>
         <Typography>
-          {authUser ? 
-            <> 
-              {authUser.uid} "User is logged in" <Button onClick={handleSignOut}>Sign Out</Button>
-            </>:    
+          {authUser ? (
+            <>
+              {authUser.uid} "User is logged in"{" "}
+              <Button onClick={handleSignOut}>Sign Out</Button>
+            </>
+          ) : (
             "User is not logged in"
-          }
+          )}
         </Typography>
       </Box>
     </Container>

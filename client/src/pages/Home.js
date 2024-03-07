@@ -27,7 +27,7 @@ const Home = () => {
   });
 
   return (
-    <div>
+    <div className="main">
       <NavBar highlight={current}></NavBar>
       <ProgressBar></ProgressBar>
       <div id="section1" className="section">

@@ -1,8 +1,7 @@
-import { useState, useEffect, useRef } from "react";
 import Home from "./pages/Home";
-import SignUp from "./components/Auth/SignUp";
-import SignIn from "./components/Auth/SignIn";
-import Admin from "./components/Admin/Admin";
+import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
+import Admin from "./pages/Admin";
 import CaseStudy from "./components/CaseStudy/CaseStudy";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
