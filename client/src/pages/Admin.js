@@ -202,64 +202,7 @@ function Admin() {
             flexDirection: "column",
             alignItems: "center",
           }}
-        >
-          <Typography variant="h4" sx={{ color: "black", mb: 3 }}>
-            Dashboard
-          </Typography>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                id="dropdown-one"
-                select
-                label="Dropdown One"
-                value={dropdownOne}
-                onChange={(e) => setDropdownOne(e.target.value)}
-                variant="outlined"
-              >
-                {optionsOne.map((option) => (
-                  <MenuItem key={option} value={option}>
-                    {option}
-                  </MenuItem>
-                ))}
-              </TextField>
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                id="dropdown-two"
-                select
-                label="Dropdown Two"
-                value={dropdownTwo}
-                onChange={(e) => setDropdownTwo(e.target.value)}
-                variant="outlined"
-              >
-                {optionsTwo.map((option) => (
-                  <MenuItem key={option} value={option}>
-                    {option}
-                  </MenuItem>
-                ))}
-              </TextField>
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                id="dropdown-three"
-                select
-                label="Dropdown Three"
-                value={dropdownThree}
-                onChange={(e) => setDropdownThree(e.target.value)}
-                variant="outlined"
-              >
-                {optionsThree.map((option) => (
-                  <MenuItem key={option} value={option}>
-                    {option}
-                  </MenuItem>
-                ))}
-              </TextField>
-            </Grid>
-          </Grid>
-        </Box>
+        ></Box>
       )}
     </Container>
   );
