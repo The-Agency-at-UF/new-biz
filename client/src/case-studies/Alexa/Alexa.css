@@ -5,18 +5,6 @@
     box-sizing: border-box;
     max-height: 100vh;
 }
-
-  /* hide scrollbar */
-  ::-webkit-scrollbar {
-    width: 1px;
-    height: 1px;
-  }
-  
-  ::-webkit-scrollbar-button {
-    width: 1px;
-    height: 1px;
-  }
-  
   .horizontal-scroll-wrapper {
     background-color: #1D3C57;
     display: flex;

@@ -6,7 +6,6 @@ import Intro from '../components/Intro/Intro';
 import NavBar from '../components/NavBar/NavBar';
 import ProgressBar from '../components/ProgressBar/ProgressBar';
 import Team from '../components/Team/Team';
-import Alexa from "../case-studies/Alexa/Alexa";
 
 const Home = () => {
   const [current, setCurrent] = useState("section1");
