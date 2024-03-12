@@ -1,0 +1,146 @@
+.navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 82px;
+  background-color: black;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navbar-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 150px;
+}
+.mousehover {
+  width: 100%;
+  height: 82px;
+  position: fixed;
+  top: 0px;
+  z-index: 5;
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+/* 
+.navbar a {
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
+} */
+
+.mousehover {
+  height: 83px;
+}
+
+.navbar a:hover {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.nav-1 {
+  color: rgb(243, 171, 87);
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.nav-2 {
+  color: rgb(240, 143, 88);
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
+}
+.nav-3 {
+  color: rgb(237, 115, 90);
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
+}
+.nav-4 {
+  color: rgb(233, 93, 96);
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
+}
+.nav-5 {
+  color: rgb(214, 112, 142);
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
+}
+.nav-6 {
+  color: rgb(193, 131, 189);
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
+}
+.nav-7 {
+  color: rgb(173, 151, 236);
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.nav-button-highlighted-1 {
+  color: rgb(243, 171, 87);
+  font-weight: 800;
+  font-size: 22px;
+  text-decoration: none;
+  text-align: center;
+}
+.nav-button-highlighted-2 {
+  color: rgb(240, 143, 88);
+  font-weight: 800;
+  font-size: 22px;
+  text-decoration: none;
+  text-align: center;
+}
+.nav-button-highlighted-3 {
+  color: rgb(237, 115, 90);
+  font-weight: 800;
+  font-size: 22px;
+  text-decoration: none;
+  text-align: center;
+}
+.nav-button-highlighted-4 {
+  color: rgb(233, 93, 96);
+  font-weight: 800;
+  font-size: 22px;
+  text-decoration: none;
+  text-align: center;
+}
+.nav-button-highlighted-5 {
+  color: rgb(214, 112, 142);
+  font-weight: 800;
+  font-size: 22px;
+  text-decoration: none;
+  text-align: center;
+}
+.nav-button-highlighted-6 {
+  color: rgb(193, 131, 189);
+  font-weight: 800;
+  font-size: 22px;
+  text-decoration: none;
+  text-align: center;
+}
+.nav-button-highlighted-7 {
+  color: rgb(173, 151, 236);
+  font-weight: 800;
+  font-size: 22px;
+  text-decoration: none;
+  text-align: center;
+}

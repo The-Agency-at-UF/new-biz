@@ -14,6 +14,10 @@
   font-family: "Fira Sans", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
 body {
   /* background-color: var(--dark);
   color: var(--light); */
