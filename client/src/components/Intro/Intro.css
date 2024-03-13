@@ -21,14 +21,18 @@
   }
   
   p {
-    color: white;
     text-align: center;
-    font-size: 2vw;
-    inline-size: 60%;
-    padding: 2%;
-    margin: auto;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  
+    color: #fff;
+    font-family: Gentona;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: normal;
   }
-
 }
 
 /*https://codepen.io/JoshMac/pen/MaYEmJ*/

@@ -23,6 +23,7 @@ body {
   }
 }
 
+
   .header h2 {
     text-align: center;
   }
@@ -50,7 +51,7 @@ h1 {
 	height: 100vh;
 }
   #section3 {
-	/*padding-top: 100px;*/
+	padding-top: 100px;
 	height: 1000px;
   }
 #section4 {
