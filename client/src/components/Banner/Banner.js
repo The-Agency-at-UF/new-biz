@@ -11,18 +11,20 @@ const images = [
 
 const Banner = () => {
   return (
-    <div class="slider">
-      <div class="slide-track">
-        {images.map(({ id, image }) => (
-          <div className="slide" key={id}>
-            <img src={image} alt={id} />
-          </div>
-        ))}
-        {images.map(({ id, image }) => (
-          <div className="slide" key={id}>
-            <img src={image} alt={id} />
-          </div>
-        ))}
+    <div class="banner-class">
+      <div class="slider-b">
+        <div class="slide-track">
+          {images.map(({ id, image }) => (
+            <div className="slide-b" key={id}>
+              <img src={image} alt={id} />
+            </div>
+          ))}
+          {images.map(({ id, image }) => (
+            <div className="slide-b" key={id}>
+              <img src={image} alt={id} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

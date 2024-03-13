@@ -6,6 +6,7 @@ import Intro from '../components/Intro/Intro';
 import NavBar from '../components/NavBar/NavBar';
 import ProgressBar from '../components/ProgressBar/ProgressBar';
 import Team from '../components/Team/Team';
+import WhoWeAre from "../components/WhoWeAre/WhatWeOffer";
 
 const Home = () => {
   const [current, setCurrent] = useState("section1");
@@ -33,8 +34,10 @@ const Home = () => {
       <div id="section1" className="section">
         <Intro />
       </div>
-      <div id="section2" className="section"></div>
-      <div id="section3" className="section">
+      <div id="section2">
+        <WhoWeAre />
+      </div>
+      <div id="section3">
         <h1>Our Clients?</h1>
         <p className="paragraph">
           Fun way to phrase?? I know redpepper studio in Nashville says “we keep
