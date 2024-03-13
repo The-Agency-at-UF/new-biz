@@ -10,21 +10,25 @@
   align-items: center;
   height: 100vh;
 }
-h1 {
-  color: white;
-  text-align: center;
-  font-size: 5vw;
-  padding: 3%;
-  margin: auto;
-}
 
-p {
-  color: white;
-  text-align: center;
-  font-size: 2vw;
-  inline-size: 60%;
-  padding: 2%;
-  margin: auto;
+.main {
+  h1 {
+    color: white;
+    text-align: center;
+    font-size: 5vw;
+    padding: 3%;
+    margin: auto;
+  }
+  
+  p {
+    color: white;
+    text-align: center;
+    font-size: 2vw;
+    inline-size: 60%;
+    padding: 2%;
+    margin: auto;
+  }
+
 }
 
 /*https://codepen.io/JoshMac/pen/MaYEmJ*/
