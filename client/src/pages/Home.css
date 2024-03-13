@@ -42,14 +42,13 @@ h1 {
 }
 
 #section1 {
-  height: 1000px;
+  height: fit-content;
 }
 #section2 {
 	height: 100vh;
-  background-color: #FFF;
-  }
+}
   #section3 {
-	/* padding-top: 100px; */
+	/*padding-top: 100px;*/
 	height: 1000px;
   }
 #section4 {

@@ -1,0 +1,31 @@
+import React from "react";
+
+const Research = () => {
+    return (
+        <section className="research">
+                    <h2 className="section-title">WHAT WE OFFER</h2>
+                        <div className="centered">
+                            <h1>RESEARCH</h1>
+                            <div className="roles">
+                                <p> <span>Research & Strategy</span>
+                                <span>1:1, Focus Group, Panel</span>
+                                </p>
+
+                                <p> <span>Analytics</span>
+                                    <span>Message Testing</span>
+                                    <span>Environmental Scanning</span>
+                                </p>
+
+                                <p> <span>Campaign Performance Tracking</span>
+                                    <span>Product, Vertical or Media Audit</span>
+                                </p>
+
+                                <p><span>Quantitative Research</span></p>
+                                
+                            </div>
+                        </div>
+                </section>
+    )
+};
+
+export default Research;
