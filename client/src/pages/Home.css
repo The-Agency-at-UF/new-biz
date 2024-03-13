@@ -7,19 +7,21 @@ body {
     color: white;
   }
 
+#section3 {
   p {
     text-align: center;
     padding-left: 15%;
     padding-right: 15%;
     padding-top: 2%;
     padding-bottom: 2%;
-
-	color: #FFF;
-	font-family: Gentona;
-	font-size: 25px;
-	font-weight: 700;
-	line-height: normal;
+  
+    color: #fff;
+    font-family: Gentona;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: normal;
   }
+}
 
   .header h2 {
     text-align: center;
