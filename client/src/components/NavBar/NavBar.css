@@ -1,7 +1,3 @@
-@font-face {
-  font-family: Gentona;
-  src: url(../../fonts/GentonaTT-Bold.ttf);
-}
 .navbar {
   top: 0;
   left: 0;
@@ -12,7 +8,6 @@
   display: flex;
   justify-content: space-evenly;
   font-family: Gentona;
-
 }
 
 .navbar-button-container {
@@ -23,12 +18,13 @@
   width: 150px;
   max-width: 1000px;
 }
+/* increased z-index so that navbar could go over "What We Offer" */ 
 .mousehover {
   width: 100%;
   height: 82px;
   position: fixed;
   top: 0px;
-  z-index: 5;
+  z-index: 10;
 }
 
 .navbar.hidden {

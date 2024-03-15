@@ -12,8 +12,6 @@
 }
 
 .box {
-  margin-top: 5vh;
-  margin-bottom: 5vh;
   margin-left: 10vw;
   margin-right: 10vw;
   font-size: 25px;
@@ -64,6 +62,7 @@
   h1 {
     color: white;
     text-align: center;
+    font-family: Gentona;
     padding: 3%;
     margin: auto;
   }
@@ -76,7 +75,7 @@
     padding-bottom: 2%;
   
     color: #fff;
-    font-family: Gentona;
+    font-family: Gentona Book;
     font-weight: 700;
     line-height: normal;
   }
