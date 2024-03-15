@@ -9,11 +9,11 @@ const NavBar = ({ highlight }) => {
   const sections = [
     "Home",
     "About",
-    "Our Team",
+    "Meet The Team",
+    "Our Clients",
     "Case 1",
     "Case 2",
     "Case 3",
-    "End",
   ];
 
   const handleMouseOver = () => {

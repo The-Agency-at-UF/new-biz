@@ -48,7 +48,8 @@ const Intro = () => {
 
       <div ref={scrollElement} className="invisible-div"></div>
       <Fade direction="up">
-        <h1>WE ARE</h1>
+        <div className="box">
+          <h1>WE ARE</h1>
         <p>
           A strategic communications firm led by professionals and staffed by
           students who are reimagining advertising and public relations.
@@ -59,10 +60,11 @@ const Intro = () => {
           creatives and coordinators - but most of all, we are the ambitious
           youth setting the precedent in communications.
         </p>
-      </Fade>
-      <h1 className="text-glow glow">
+        <h1 className="text-glow glow">
         WE ILLUMINATE THE CULTURAL STAGE WITH GEN Z PASSION
       </h1>
+        </div>
+      </Fade>
     </div>
   );
 };

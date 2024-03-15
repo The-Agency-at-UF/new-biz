@@ -7,7 +7,7 @@ body {
     color: white;
   }
 
-#section3 {
+#section4 {
   p {
     text-align: center;
     padding-left: 15%;
@@ -22,7 +22,6 @@ body {
     line-height: normal;
   }
 }
-
 
   .header h2 {
     text-align: center;
@@ -50,20 +49,23 @@ h1 {
 #section2 {
 	height: 100vh;
 }
-  #section3 {
-	padding-top: 100px;
-	height: 1000px;
-  }
+#section3 {
+	height: 100vh;
+}
 #section4 {
-  height: 1000px;
+  padding-top: 10vh;
+	height: 100vh;
 }
 #section5 {
-  height: 1000px;
+  height: fit-content;
 }
 #section6 {
   height: 1000px;
 }
 #section7 {
+  height: 1000px;
+}
+#section8 {
   height: 1000px;
 }
 

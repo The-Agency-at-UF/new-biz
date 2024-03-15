@@ -9,7 +9,9 @@
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 1140px;
+  width: 70vw;
+  max-width: 1140px;
+
 }
 
 .slider-b::before,
