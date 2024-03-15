@@ -8,11 +8,11 @@ const ProgressBar = ({ highlight }) => {
   const sections = [
     "Home",
     "About",
-    "Our Team",
+    "Meet The Team",
+    "Our Clients",
     "Case 1",
     "Case 2",
     "Case 3",
-    "End",
   ];
 
   // so refresh doesn't reset the scroll bar
@@ -24,7 +24,7 @@ const ProgressBar = ({ highlight }) => {
     let scrolled = (scroll / height) * 100;
     if (scrolled >= 0) {
       document.getElementById("progressbar").style.height =
-        100 - scrolled + "%";
+        scrolled + "%";
     }
   }, []);
 
@@ -40,31 +40,33 @@ const ProgressBar = ({ highlight }) => {
         document.documentElement.clientHeight;
       let scrolled = (scroll / height) * 100;
       if (scrolled >= 0) {
-        progressBar.style.height = 100 - scrolled + "%";
+        progressBar.style.height = scrolled + "%";
       }
     };
   });
 
   return (
-    <div className="progress-container">
-      {/* <div className="sections">
-        {sections.map((buttonName, index) => {
-          if (Number(highlight.substring(7)) === index + 1) {
-            return (
-              <div
-                className={`nav-button nav-button-highlighted nav-${index + 1}`}
-              >
-                {buttonName}
-              </div>
-            );
-          } else {
-            return (
-              <div className={`nav-button nav-${index + 1}`}>{buttonName}</div>
-            );
-          }
-        })}
-      </div> */}
-      <div id="progressbar" className="progress-bar"></div>
+    <div className="other-container">
+        <div className="progress-container">
+              {/* <div className="sections">
+                {sections.map((buttonName, index) => {
+                  if (Number(highlight.substring(7)) === index + 1) {
+                    return (
+                      <div
+                        className={`nav-button nav-button-highlighted nav-${index + 1}`}
+                      >
+                        {buttonName}
+                      </div>
+                    );
+                  } else {
+                    return (
+                      <div className={`nav-button nav-${index + 1}`}>{buttonName}</div>
+                    );
+                  }
+                })}
+              </div> */}
+              <div id="progressbar" className="progress-bar"></div>
+      </div>
     </div>
   );
 };

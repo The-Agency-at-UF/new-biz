@@ -23,6 +23,13 @@ body {
   }
 }
 
+#section3 {
+  h1 {
+    text-align: left;
+    margin-left: 10vw;
+  }
+}
+
   .header h2 {
     text-align: center;
   }
@@ -50,6 +57,7 @@ h1 {
 	height: 100vh;
 }
 #section3 {
+  padding-top: 10vh;
 	height: 100vh;
 }
 #section4 {

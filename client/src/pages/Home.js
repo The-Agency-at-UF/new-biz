@@ -39,7 +39,7 @@ const Home = () => {
         <WhoWeAre />
       </div>
       <div id="section3" className="section">
-      <h1>Meet The Team</h1>
+      <h1>MEET THE TEAM</h1>
       </div>
       <div id="section4">
         <h1>Our Clients?</h1>
