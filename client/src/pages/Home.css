@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .main {
   margin: 0;
   padding: 0;
@@ -7,6 +8,25 @@
   color: white;
   background-color: black;
 }
+=======
+@font-face {
+  font-family: Gentona;
+  src: url(../fonts/GentonaTT-Bold.ttf);
+}
+@font-face {
+  font-family: Gentona Book;
+  src: url(../fonts/Gentona\ Book.otf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+    overflow-y: scroll;
+    color: white;
+  }
+>>>>>>> 31921fe (added fonts, team, minor details)
 
 #section4 {
   p {
@@ -53,6 +73,8 @@ h1 {
 
 #section1 {
   height: fit-content;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
 }
 #section2 {
   height: 100vh;
@@ -62,12 +84,11 @@ h1 {
   height: 1000px;
 }
 #section3 {
-  padding-top: 10vh;
+  margin-top: 10vh;
 	height: 100vh;
 }
 #section4 {
   padding-top: 10vh;
-	height: 100vh;
 }
 #section5 {
   height: fit-content;

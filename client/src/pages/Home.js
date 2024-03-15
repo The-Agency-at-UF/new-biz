@@ -41,6 +41,7 @@ const Home = () => {
       </div>
       <div id="section3" className="section">
       <h1>MEET THE TEAM</h1>
+        <Team/>
       </div>
       <div id="section4">
         <h1>Our Clients?</h1>

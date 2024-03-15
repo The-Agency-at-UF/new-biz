@@ -1,8 +1,11 @@
 .whole-container {
+  position: relative;
   display: flex;
-  justify-content: flex-start; /* Start from the left side */
-  flex-wrap: nowrap; /* Prevent wrapping */
-  gap: 100px; /* Add some spacing between team members */
+  justify-content: flex-start;
+  gap: 20px;
+  overflow-x: auto;
+  margin-left: 10vw;
+  margin-right: 5vw;
 }
   
   .border-container{
@@ -27,7 +30,6 @@
     overflow: hidden;
     position:relative;
   }
-
 
   .team-container:hover {
     .hoverable-image{
@@ -98,7 +100,7 @@
 
   .name-text {
     color: #FFF;
-    font-family: 'Gentona Book', sans-serif;
+    font-family: 'Gentona', sans-serif;
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
