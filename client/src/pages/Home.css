@@ -1,11 +1,12 @@
-body {
-    margin: 0;
-    padding: 0;
-    -ms-overflow-style: none;
-    scrollbar-width: none; 
-    overflow-y: scroll;
-    color: white;
-  }
+.main {
+  margin: 0;
+  padding: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  color: white;
+  background-color: black;
+}
 
 #section3 {
   p {
@@ -14,7 +15,7 @@ body {
     padding-right: 15%;
     padding-top: 2%;
     padding-bottom: 2%;
-  
+
     color: #fff;
     font-family: Gentona;
     font-size: 25px;
@@ -23,10 +24,9 @@ body {
   }
 }
 
-
-  .header h2 {
-    text-align: center;
-  }
+.header h2 {
+  text-align: center;
+}
 
 /* add this to github*/
 body::-webkit-scrollbar {
@@ -48,12 +48,12 @@ h1 {
   height: fit-content;
 }
 #section2 {
-	height: 100vh;
+  height: 100vh;
 }
-  #section3 {
-	padding-top: 100px;
-	height: 1000px;
-  }
+#section3 {
+  padding-top: 100px;
+  height: 1000px;
+}
 #section4 {
   height: 1000px;
 }
