@@ -6,6 +6,7 @@ import Intro from "../components/Intro/Intro";
 import NavBar from "../components/NavBar/NavBar";
 import ProgressBar from "../components/ProgressBar/ProgressBar";
 import Team from "../components/Team/Team";
+//this is a test
 import WhoWeAre from "../components/WhoWeAre/WhatWeOffer";
 
 const Home = () => {
