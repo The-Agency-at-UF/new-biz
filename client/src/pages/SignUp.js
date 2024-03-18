@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { auth } from "../firebase.config";
+import { auth, db } from "../firebase.config";
+import { doc, setDoc } from "firebase/firestore";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import {
   Avatar,
@@ -27,14 +28,15 @@ function SignUp() {
     event.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
       .then(async (result) => {
-        console.log(result);
-        try {
-          // alert("YEEEEE"); LMAO
-          console.log("Succeffully created user and stored something");
-          navigate("/admin"); // Redirect to admin page on successful sign-up
-        } catch (e) {
-          console.error("Error adding document: ", e);
-        }
+        const user = result.user;
+        // Add user to Firestore
+        await setDoc(doc(db, "users", user.uid), {
+          name: Name,
+          email: email,
+          isAdmin: false,
+        });
+        console.log("Successfully created user and stored something");
+        navigate("/admin"); // Redirect to admin page on successful sign-up
       })
       .catch((error) => {
         const errorCode = error.code;

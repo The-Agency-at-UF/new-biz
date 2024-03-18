@@ -57,7 +57,7 @@ function Admin() {
             const userData = docSnapshot.data();
             setIsAdmin(userData.isAdmin);
           } else {
-            console.log("No such document!");
+            console.log("User doesn't EXIST!?");
           }
         })
         .catch((error) => {
