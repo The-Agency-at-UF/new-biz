@@ -44,13 +44,7 @@ const Home = () => {
         <Team/>
       </div>
       <div id="section4">
-        <h1>Our Clients?</h1>
-        <p className="paragraph">
-          Fun way to phrase?? I know redpepper studio in Nashville says “we keep
-          damn good company.” Completely fine keeping our clients, but it could
-          be fun to infuse personality - like “the kind of company we keep” idk
-          but just a thought
-        </p>
+        <h1>We synergize with the best</h1>
         <Banner />
       </div>
       <div id="section5" className="section">
