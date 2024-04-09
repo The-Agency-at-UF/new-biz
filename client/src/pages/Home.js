@@ -1,4 +1,3 @@
-// This is the main component we will add all other components to the site here
 import React, { useEffect, useState } from "react";
 import "./Home.css";
 import Banner from "../components/Banner/Banner";
@@ -6,6 +5,7 @@ import Intro from "../components/Intro/Intro";
 import NavBar from "../components/NavBar/NavBar";
 import ProgressBar from "../components/ProgressBar/ProgressBar";
 import Team from "../components/Team/Team";
+import NewTeam from "../components/Team/NewTeam";
 //this is a test
 import WhoWeAre from "../components/WhoWeAre/WhatWeOffer";
 
@@ -18,9 +18,7 @@ const Home = () => {
 
   window.addEventListener("scroll", () => {
     sections.forEach((section) => {
-      // get pixel value of section from the top of the page to the top of the section
       const sectionTop = section.offsetTop;
-      // get pixel value of
       const sectionHeight = section.clientHeight;
       if (window.scrollY >= sectionTop - sectionHeight / 3) {
         setCurrent(section.getAttribute("id"));
@@ -39,6 +37,14 @@ const Home = () => {
         <WhoWeAre />
       </div>
       <div id="section3">
+        <h1 className="meet-team-header">MEET THE TEAM</h1>
+        <div className="team-section">
+          <div className="team-scroll-container">
+            <Team />
+          </div>
+        </div>
+      </div>
+      <div id="section4">
         <h1>Our Clients?</h1>
         <p className="paragraph">
           Fun way to phrase?? I know redpepper studio in Nashville says “we keep
@@ -48,18 +54,7 @@ const Home = () => {
         </p>
         <Banner />
       </div>
-      <div id="section4" className="section">
-        <h1>Case 1</h1>
-      </div>
-      <div id="section5" className="section">
-        <h1>Case 2</h1>
-      </div>
-      <div id="section6" className="section">
-        <h1>Case 3</h1>
-      </div>
-      <div id="section7" className="section">
-        <h1>End</h1>
-      </div>
+
     </div>
   );
 };

@@ -5,6 +5,8 @@ import Google from "./Google";
 import Uber from "./Uber";
 import Test from "./Test";
 import Michelob from "./Michelob";
+import Alexa from '../../case-studies/Alexa/Alexa';
+import Home from '../../../src/pages/Home';
 
 // import all case study components/pages
 import { db } from "../../firebase.config";
@@ -14,24 +16,29 @@ const CaseStudy = () => {
   const { caseStudyId } = useParams();
 
   const [caseStudies, setCaseStudies] = useState([]);
+  const [caseStudySections, setCaseStudySections] = useState([]);
 
   // list of all available case studies ready to render
   // key must match what is in the database
   const caseStudyTags = {
     google: Google,
-    michelob: Michelob,
+    michelob: Alexa,
     test: Test,
     uber: Uber,
-    amazon: Amazon,
+    amazon: Alexa,
   };
 
   useEffect(() => {
+    console.log("LOOP");
     const fetchCase = async () => {
       const caseRef = doc(db, "casestudy", caseStudyId);
       const docSnap = await getDoc(caseRef);
 
       if (docSnap.exists()) {
         setCaseStudies(docSnap.data().caseStudies);
+        // Assuming your case studies have sections like "section1", "section2", etc.
+        const sections = docSnap.data().caseStudies.map((caseStudy, index) => `section${index + 1}`);
+        setCaseStudySections(sections);
       } else {
         // handle url not pointing to document in DB
         console.log("No such document!");
@@ -42,10 +49,11 @@ const CaseStudy = () => {
 
   return (
     <div>
+    <Home />
       <h1>CASE STUDY</h1>
-      {caseStudies.map((caseName, index) => {
-        const SpecificCaseStudy = caseStudyTags[caseName];
-        return SpecificCaseStudy ? <SpecificCaseStudy key={index} /> : null;
+      {caseStudySections.map((section, index) => {
+        const SpecificCaseStudy = caseStudyTags[caseStudies[index]];
+        return SpecificCaseStudy ? <div id={section} key={index}><SpecificCaseStudy /></div> : null;
       })}
     </div>
   );
