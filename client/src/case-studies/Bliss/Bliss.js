@@ -1,14 +1,14 @@
-import React, {useEffect, useState, useRef} from "react";
-import "./Alexa.css";
-import alexaLogo from "../../images/amazon_alexa.png";
+import React, {useState, useRef, useEffect} from "react";
+import "./Bliss.css";
+import blissLogo from "../../images/bliss.png";
 import mario from "../../images/mario.png";
-import tallAlexa from "../../images/tall_alexa.png";
-import teamTexts from "../../images/team_texts.png";
+import blissBottle1 from "../../images/bliss_bottle.png";
+import blissComment1 from "../../images/bliss_comment.png";
 import fortnite from "../../images/fortnite.png";
-import smallAlexa from "../../images/small_alexa.png";
+import blissBottle2 from "../../images/bliss_bottle2.png";
 import challengeTexts from "../../images/challenge_texts.png";
 import marvel from "../../images/black_panther.png";
-import alexa2 from "../../images/alexa2.png";
+import blissBottle3 from "../../images/bliss_bottle3.png";
 import solutionTexts1 from "../../images/solution_texts1.png";
 import solutionTexts2 from "../../images/solution_texts2.png";
 import vector1 from "../../images/vector_1.png";
@@ -17,7 +17,7 @@ import vector4 from "../../images/vector_4.png";
 import vector5 from "../../images/vector_5.png";
 import vector7 from "../../images/vector_7.png";
 
-const Alexa = () => {
+const Bliss = () => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
@@ -47,10 +47,10 @@ const Alexa = () => {
 
 
   return (
-    <div class="case-study-alexa">
-      <img src={alexaLogo} alt="amazon alexa logo" id="alexa-logo" />
+    <div class="case-study-bliss">
+      <img src={blissLogo} alt="amazon alexa logo" id="alexa-logo" />
 
-      <div ref={ref} className={isVisible ? "horizontal-scroll-wrapper" : "horizontal-scroll-wrapper out-of-view"}>
+      <div ref={ref} className={ isVisible ? "horizontal-scroll-wrapper-bliss" : " horizontal-scroll-wrapper-bliss out-of-view"}>
         <div class="img-wrapper fastest">
           <img src={vector1} alt="" id="vector1" />
         </div>
@@ -77,15 +77,15 @@ const Alexa = () => {
         </div>
 
         <div class="img-wrapper slower vertical">
-          <img src={tallAlexa} alt="tall amazon alexa" id="tall-alexa" />
+          <img src={blissBottle1} alt="tall amazon alexa" id="tall-alexa" />
         </div>
 
         <div class="img-wrapper fastest">
-          <img src={mario} alt="mario" id="mario" />
+          <img src={blissBottle3} alt="mario" id="mario" />
         </div>
 
         <div class="img-wrapper faster1">
-          <img src={teamTexts} alt="text bubbles" id="team-texts" />
+          <img src={blissComment1} alt="text bubbles" id="team-texts" />
         </div>
 
         <div class="img-wrapper">
@@ -125,7 +125,7 @@ const Alexa = () => {
         </div>
 
         <div class="img-wrapper">
-          <img src={smallAlexa} alt="small amazon alexa" id="small-alexa" />
+          <img src={blissBottle3} alt="small amazon alexa" id="small-alexa" />
         </div>
 
         <div className="img-wrapper">
@@ -150,7 +150,7 @@ const Alexa = () => {
         </div>
 
         <div class="img-wrapper slower slower2">
-          <img src={alexa2} alt="amazon alexa" id="alexa-2" />
+          <img src={blissBottle2} alt="amazon alexa" id="alexa-2" />
         </div>
 
         <div class="img-wrapper">
@@ -195,4 +195,4 @@ const Alexa = () => {
   );
 };
 
-export default Alexa;
+export default Bliss;

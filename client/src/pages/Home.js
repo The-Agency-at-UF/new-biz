@@ -8,6 +8,8 @@ import ProgressBar from "../components/ProgressBar/ProgressBar";
 import Team from "../components/Team/Team";
 //this is a test
 import WhoWeAre from "../components/WhoWeAre/WhatWeOffer";
+import Alexa from "../case-studies/Alexa/Alexa";
+import Bliss from "../case-studies/Bliss/Bliss";
 
 const Home = () => {
   const [current, setCurrent] = useState("section1");
@@ -49,13 +51,13 @@ const Home = () => {
         <Banner />
       </div>
       <div id="section4" className="section">
-        <h1>Case 1</h1>
+        <Alexa />
       </div>
       <div id="section5" className="section">
-        <h1>Case 2</h1>
+        <Bliss/>
       </div>
       <div id="section6" className="section">
-        <h1>Case 3</h1>
+        <Alexa />
       </div>
       <div id="section7" className="section">
         <h1>End</h1>
