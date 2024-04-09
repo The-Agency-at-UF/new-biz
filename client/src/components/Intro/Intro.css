@@ -1,25 +1,73 @@
 .logo-image {
-  max-width: 50%;
-  max-height: 60%;
-  display: block;
-  margin: auto;
-  margin-top: -40px;
+  max-width: 1000px;
+  width: 60vw;
 }
+
 .logo-container {
+  padding-left: 0;
   display: flex;
+  justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh; 
+}
+
+.box {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  font-size: 25px;
+}
+
+@media screen and (min-width: 1280px) {
+  h1 {
+    font-size: 75px; 
+  }
+  p {
+    font-size: 25px; 
+  }
+}
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 2.5rem; 
+  }
+  p {
+    font-size: 1.5rem; 
+  }
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem; 
+  }
+  p {
+    font-size: 1.5rem; 
+  }
+}
+@media screen and (max-width: 425px) {
+  h1 {
+    font-size: 1.5rem; 
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 321px) {
+  h1 {
+    font-size: 1.25rem; 
+  }
+  p {
+    font-size: 0.75rem; 
+  }
 }
 
 .main {
   h1 {
     color: white;
     text-align: center;
-    font-size: 5vw;
     padding: 3%;
     margin: auto;
   }
-  
+  /* paragraph font needs to be changed to thin Gentona - currently bold*/
   p {
     text-align: center;
     padding-left: 15%;
@@ -29,7 +77,6 @@
   
     color: #fff;
     font-family: Gentona;
-    font-size: 25px;
     font-weight: 700;
     line-height: normal;
   }

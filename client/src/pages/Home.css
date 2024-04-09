@@ -8,7 +8,7 @@
   background-color: black;
 }
 
-#section3 {
+#section4 {
   p {
     text-align: center;
     padding-left: 15%;
@@ -24,9 +24,9 @@
   }
 }
 
-.header h2 {
-  text-align: center;
-}
+  .header h2 {
+    text-align: center;
+  }
 
 /* add this to github*/
 body::-webkit-scrollbar {
@@ -54,16 +54,23 @@ h1 {
   padding-top: 100px;
   height: 1000px;
 }
+#section3 {
+	height: 100vh;
+}
 #section4 {
-  height: 1000px;
+  padding-top: 10vh;
+	height: 100vh;
 }
 #section5 {
-  height: 1000px;
+  height: fit-content;
 }
 #section6 {
   height: 1000px;
 }
 #section7 {
+  height: 1000px;
+}
+#section8 {
   height: 1000px;
 }
 

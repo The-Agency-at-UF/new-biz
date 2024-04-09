@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Gentona;
+  src: url(../../fonts/GentonaTT-Bold.ttf);
+}
 .navbar {
   top: 0;
   left: 0;
@@ -7,6 +11,8 @@
   transition: transform 0.3s ease;
   display: flex;
   justify-content: space-evenly;
+  font-family: Gentona;
+
 }
 
 .navbar-button-container {
@@ -15,6 +21,7 @@
   align-items: center;
   background-color: black;
   width: 150px;
+  max-width: 1000px;
 }
 .mousehover {
   width: 100%;

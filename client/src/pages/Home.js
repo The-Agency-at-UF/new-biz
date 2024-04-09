@@ -8,6 +8,7 @@ import ProgressBar from "../components/ProgressBar/ProgressBar";
 import Team from "../components/Team/Team";
 //this is a test
 import WhoWeAre from "../components/WhoWeAre/WhatWeOffer";
+import Alexa from "../case-studies/Alexa/Alexa";
 
 const Home = () => {
   const [current, setCurrent] = useState("section1");
@@ -38,7 +39,10 @@ const Home = () => {
       <div id="section2">
         <WhoWeAre />
       </div>
-      <div id="section3">
+      <div id="section3" className="section">
+      <h1>Meet The Team</h1>
+      </div>
+      <div id="section4">
         <h1>Our Clients?</h1>
         <p className="paragraph">
           Fun way to phrase?? I know redpepper studio in Nashville says “we keep
@@ -48,17 +52,14 @@ const Home = () => {
         </p>
         <Banner />
       </div>
-      <div id="section4" className="section">
-        <h1>Case 1</h1>
-      </div>
       <div id="section5" className="section">
-        <h1>Case 2</h1>
+      <Alexa/>
       </div>
       <div id="section6" className="section">
-        <h1>Case 3</h1>
+      <h1>Case2</h1>
       </div>
       <div id="section7" className="section">
-        <h1>End</h1>
+      <h1>Case3</h1>
       </div>
     </div>
   );
