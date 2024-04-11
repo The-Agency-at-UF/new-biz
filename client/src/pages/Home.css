@@ -1,14 +1,22 @@
-.main {
-  margin: 0;
-  padding: 0;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  overflow-y: scroll;
-  color: white;
-  background-color: black;
+@font-face {
+  font-family: Gentona;
+  src: url(../fonts/GentonaTT-Bold.ttf);
+}
+@font-face {
+  font-family: Gentona Book;
+  src: url(../fonts/Gentona\ Book.otf);
 }
 
-#section3 {
+body {
+    margin: 0;
+    padding: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+    overflow-y: scroll;
+    color: white;
+  }
+
+#section4 {
   p {
     text-align: center;
     padding-left: 15%;
@@ -21,6 +29,13 @@
     font-size: 25px;
     font-weight: 700;
     line-height: normal;
+  }
+}
+
+#section3 {
+  h1 {
+    text-align: left;
+    margin-left: 10vw;
   }
 }
 
@@ -46,24 +61,29 @@ h1 {
 
 #section1 {
   height: fit-content;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
 }
 #section2 {
   height: 100vh;
 }
 #section3 {
-  padding-top: 100px;
-  height: 1000px;
+  margin-top: 10vh;
+	height: 100vh;
 }
 #section4 {
-  height: 1000px;
+  padding-top: 10vh;
 }
 #section5 {
-  height: 1000px;
+  height: fit-content;
 }
 #section6 {
   height: 1000px;
 }
 #section7 {
+  height: 1000px;
+}
+#section8 {
   height: 1000px;
 }
 

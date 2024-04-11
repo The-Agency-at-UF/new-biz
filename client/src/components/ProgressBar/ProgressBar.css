@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 0;
   -ms-overflow-style: none;
-  scrollbar-width: none;
   overflow-y: scroll;
   color: white;
 }
@@ -24,34 +23,33 @@ body {
   height: 25px;
 }
 
-/* add this to github*/
 body::-webkit-scrollbar {
   display: none;
 }
 
 .progress-container {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   position: fixed;
   top: 70px;
   bottom: 70px;
   right: 10px;
   width: 4px;
   height: 90%;
+  background: inher;
+  margin: auto;
+  z-index: 10;
+}
+
+.progress-bar {
+  width: 4px;
+  height: 86.5%;
   background: linear-gradient(
     to bottom,
     #ffb23e 2.08%,
     #fe4d55 50%,
     #ab9bfd 97.92%
   );
-  margin: auto;
-  z-index: 30;
-}
-
-.progress-bar {
-  width: 4px;
-  height: 86.5%;
-  background: black;
 }
 
 .progress-bar:before {

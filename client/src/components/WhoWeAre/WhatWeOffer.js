@@ -30,6 +30,8 @@ const WhatWeOffer = () => {
   
     return (
       <div className="slider-container">
+        <h2 className="section-title">WHAT WE OFFER</h2>
+
         <div className="slider" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {slides.map((slide, index) => (
             <div key={slide.id} className="slide">
