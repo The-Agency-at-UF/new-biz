@@ -47,7 +47,7 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-h1 {
+#section4 h1 {
   text-align: center;
   margin: auto;
 
@@ -107,4 +107,19 @@ h1 {
 }
 .nav-7 {
   color: rgb(173, 151, 236);
+}
+
+.team-section {
+  overflow-x: auto; 
+  white-space: nowrap; 
+}
+
+.team-scroll-container {
+  display: inline-block;
+}
+
+#section3 .meet-team-header {
+  text-align: left !important;
+  font-size: 4rem;
+  font-family: Gentona;
 }

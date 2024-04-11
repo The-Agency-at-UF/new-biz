@@ -1,4 +1,3 @@
-// This is the main component we will add all other components to the site here
 import React, { useEffect, useState } from "react";
 import "./Home.css";
 import Banner from "../components/Banner/Banner";
@@ -6,6 +5,7 @@ import Intro from "../components/Intro/Intro";
 import NavBar from "../components/NavBar/NavBar";
 import ProgressBar from "../components/ProgressBar/ProgressBar";
 import Team from "../components/Team/Team";
+import NewTeam from "../components/Team/NewTeam";
 //this is a test
 import WhoWeAre from "../components/WhoWeAre/WhatWeOffer";
 import Alexa from "../case-studies/Alexa/Alexa";
@@ -19,9 +19,7 @@ const Home = () => {
 
   window.addEventListener("scroll", () => {
     sections.forEach((section) => {
-      // get pixel value of section from the top of the page to the top of the section
       const sectionTop = section.offsetTop;
-      // get pixel value of
       const sectionHeight = section.clientHeight;
       if (window.scrollY >= sectionTop - sectionHeight / 3) {
         setCurrent(section.getAttribute("id"));
@@ -40,8 +38,12 @@ const Home = () => {
         <WhoWeAre />
       </div>
       <div id="section3" className="section">
-      <h1>MEET THE TEAM</h1>
-        <Team/>
+        <h1 className="meet-team-header">MEET THE TEAM</h1>
+        <div className="team-section">
+          <div className="team-scroll-container">
+            <Team />
+          </div>
+        </div>
       </div>
       <div id="section4">
         <h1>We synergize with the best</h1>
