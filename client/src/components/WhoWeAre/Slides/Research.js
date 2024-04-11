@@ -3,7 +3,6 @@ import React from "react";
 const Research = () => {
     return (
         <section className="research">
-                    <h2 className="section-title">WHAT WE OFFER</h2>
                         <div className="centered">
                             <h1>RESEARCH</h1>
                             <div className="roles">

@@ -14,7 +14,7 @@ const ProgressBar = () => {
     let scrolled = (scroll / height) * 100;
     if (scrolled >= 0) {
       document.getElementById("progressbar").style.height =
-        100 - scrolled + "%";
+        scrolled + "%";
     }
   }, []);
 
@@ -30,7 +30,7 @@ const ProgressBar = () => {
         document.documentElement.clientHeight;
       let scrolled = (scroll / height) * 100;
       if (scrolled >= 0) {
-        progressBar.style.height = 100 - scrolled + "%";
+        progressBar.style.height = scrolled + "%";
       }
     };
   });

@@ -1,4 +1,5 @@
 .whole-container {
+  position: relative;
   display: flex;
   justify-content: flex-start; /* Start from the left side */
   flex-wrap: nowrap; /* Prevent wrapping */
@@ -27,7 +28,6 @@
     overflow: hidden;
     position:relative;
   }
-
 
   .team-container:hover {
     .hoverable-image{

@@ -3,7 +3,6 @@ import React from "react";
 const Creative = () => {
     return (
         <section className="creative">
-                    <h2 className="section-title">WHAT WE OFFER</h2>
                         <div className="centered">
                             <h1>CREATIVE</h1>
                             <div className="roles">
