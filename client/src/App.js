@@ -1,16 +1,13 @@
-import { useState, useEffect, useRef } from "react";
 import Home from "./pages/Home";
-import SignUp from "./components/Auth/SignUp";
-import SignIn from "./components/Auth/SignIn";
-import Admin from "./components/Admin/Admin";
+import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
+import Admin from "./pages/Admin";
 import CaseStudy from "./components/CaseStudy/CaseStudy";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // This line connects this front-end code to the server
 
 const App = () => {
-  
-
   return (
     <Router>
       <Routes>
@@ -18,7 +15,7 @@ const App = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/admin" element={<Admin />} />
-        <Route path="/casestudy/:caseStudyId" element={<CaseStudy />} />
+        <Route path="/:caseStudyId" element={<CaseStudy />} />
 
         {/* Add other routes as needed */}
       </Routes>
