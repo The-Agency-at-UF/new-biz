@@ -16,31 +16,27 @@ body {
     color: white;
   }
 
-#section4 {
-  p {
-    text-align: center;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+#section4 p {
+  text-align: center;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 
-    color: #fff;
-    font-family: Gentona;
-    font-size: 25px;
-    font-weight: 700;
-    line-height: normal;
-  }
+  color: #fff;
+  font-family: Gentona;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: normal;
 }
 
-#section3 {
-  h1 {
+#section3 h1 {
     text-align: left;
     margin-left: 10vw;
-  }
 }
 
 .header h2 {
-  text-align: center;
+    text-align: center;
 }
 
 /* add this to github*/
@@ -57,28 +53,37 @@ body::-webkit-scrollbar {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  width: auto;
 }
 
 #section1 {
   height: fit-content;
   margin-bottom: 5vh;
   margin-top: 5vh;
+  height: 200vh;
 }
 #section2 {
   height: 100vh;
 }
 #section3 {
-  margin-top: 10vh;
-	height: 100vh;
+  padding-top: 10vw;
 }
-#section4 {
-  padding-top: 10vh;
-}
-#section5 {
+
+#section3 {
   height: fit-content;
 }
+
+#section4 {
+ display: grid;
+ place-items: center;  
+ height: 100vh;   
+}
+
+#section5 {
+  height: 100vh;
+}
 #section6 {
-  height: 1000px;
+  height: 100vh;
 }
 #section7 {
   height: 1000px;
