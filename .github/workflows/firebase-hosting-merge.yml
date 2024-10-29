@@ -21,3 +21,4 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BUSINESS_DECK_WEBSITE }}
           channelId: live
           projectId: business-deck-website
+          entryPoint: client
