@@ -16,38 +16,34 @@ body {
     color: white;
   }
 
-#section4 {
-  p {
-    text-align: center;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+#section4 p {
+  text-align: center;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 
-    color: #fff;
-    font-family: Gentona;
-    font-size: 25px;
-    font-weight: 700;
-    line-height: normal;
-  }
+  color: #fff;
+  font-family: Gentona;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: normal;
 }
 
-#section3 {
-  h1 {
+#section3 h1 {
     text-align: left;
     margin-left: 10vw;
-  }
 }
 
-  .header h2 {
+.header h2 {
     text-align: center;
-  }
+}
 
 /* add this to github*/
 body::-webkit-scrollbar {
   display: none;
 }
-h1 {
+#section4 h1 {
   text-align: center;
   margin: auto;
 
@@ -92,6 +88,9 @@ h1 {
 #section7 {
   height: 1000px;
 }
+#section8 {
+  height: 1000px;
+}
 
 .nav-1 {
   color: rgb(243, 171, 87);
@@ -113,4 +112,19 @@ h1 {
 }
 .nav-7 {
   color: rgb(173, 151, 236);
+}
+
+.team-section {
+  overflow-x: auto; 
+  white-space: nowrap; 
+}
+
+.team-scroll-container {
+  display: inline-block;
+}
+
+#section3 .meet-team-header {
+  text-align: left !important;
+  font-size: 4rem;
+  font-family: Gentona;
 }

@@ -29,6 +29,7 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import TeamAdmin from "../components/Team/TeamAdmin";
 
 function Admin() {
   const [authUser, setAuthUser] = useState(null);
@@ -45,12 +46,12 @@ function Admin() {
       unsubscribe();
     };
   }, []);
-
+  
   useEffect(() => {
     if (authUser) {
       const userId = authUser.uid;
       const userRef = doc(db, "users", userId);
-
+  
       getDoc(userRef)
         .then((docSnapshot) => {
           if (docSnapshot.exists()) {
@@ -63,22 +64,29 @@ function Admin() {
         .catch((error) => {
           console.log("Error getting document:", error);
         });
-
-      const fetchCaseStudies = async () => {
-        const querySnapshot = await getDocs(collection(db, "casestudy"));
-        const caseStudyList = [];
-        querySnapshot.forEach((doc) => {
-          // Assuming each document has a 'name' field you want to display
-          caseStudyList.push({ id: doc.id, company: doc.data().company });
-        });
-        setCaseStudies(caseStudyList);
-      };
-
-      fetchCaseStudies().catch(console.error);
     } else {
       console.log("No user signed in");
     }
-  }, [authUser, caseStudies]);
+  }, [authUser]);
+  
+  useEffect(() => {
+    const fetchCaseStudies = async () => {
+      if (isAdmin) {
+        try {
+          const querySnapshot = await getDocs(collection(db, "casestudy"));
+          const caseStudyList = [];
+          querySnapshot.forEach((doc) => {
+            caseStudyList.push({ id: doc.id, company: doc.data().company });
+          });
+          setCaseStudies(caseStudyList);
+        } catch (error) {
+          console.error("Error fetching case studies: ", error);
+        }
+      }
+    };
+  
+    fetchCaseStudies().catch(console.error);
+  }, [isAdmin]);
 
   const handleSignOut = () => {
     auth
@@ -366,6 +374,10 @@ function Admin() {
               </Grid>
             </Box>
           </Box>
+          <Typography sx={{ color: "black", mb: 3 }} variant="h4">
+            Add Team Member
+          </Typography>
+          <TeamAdmin />
         </Box>
       ) : (
         <Box

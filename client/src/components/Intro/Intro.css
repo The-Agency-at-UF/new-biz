@@ -57,8 +57,7 @@
   }
 }
 
-.main {
-  h1 {
+.main h1 {
     color: white;
     text-align: center;
     font-family: Gentona;
@@ -66,7 +65,7 @@
     margin: auto;
   }
   /* paragraph font needs to be changed to thin Gentona - currently bold*/
-  p {
+.main p {
     text-align: center;
     padding-left: 15%;
     padding-right: 15%;
@@ -78,7 +77,6 @@
     font-weight: 700;
     line-height: normal;
   }
-}
 
 /*https://codepen.io/JoshMac/pen/MaYEmJ*/
 
