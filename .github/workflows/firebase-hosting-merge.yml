@@ -11,11 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm run build
-        working-directory: ./Business-Deck-Website/client
+      - run: npm install
+        working-directory: client
+      - run: CI='' npm run build
+        working-directory: client
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BUSINESS_DECK_WEBSITE }}
           channelId: live
           projectId: business-deck-website
+          entryPoint: client
