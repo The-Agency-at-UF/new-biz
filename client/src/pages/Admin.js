@@ -176,7 +176,7 @@ function Admin() {
         sx={{
           display: "flex",
           flexDirection: "row",
-          alignItems: "center",
+          alignItems: "left",
           justifyContent: "space-between",
           width: "100%", // Ensure the box takes up the full container width
           mt: 2,
@@ -314,15 +314,15 @@ function Admin() {
             <Box sx={{ width: "300px" }}>
               <Grid container spacing={2}>
                 <Grid item xs={12}>
-                  <Typography sx={{ color: "black", mb: 3 }} variant="h5">
+                <Typography sx={{ color: "black", mb: 3, textAlign: "center" }} variant="h5">
                     Active links
                   </Typography>
-                  <List>
+                  <List id="admin-list">
                     {caseStudies.length !== 0 ? (
                       caseStudies.map((caseStudy, index) => (
                         <ListItem
                           key={index}
-                          sx={{ mb: 1 }}
+                          sx={{ color: "black", mb: 1 }}
                           secondaryAction={
                             <IconButton
                               onClick={() =>
@@ -339,7 +339,7 @@ function Admin() {
                             <IconButton
                               onClick={() =>
                                 copyTextToClipboard(
-                                  `IDKTHEURL.com/${caseStudy.company}`
+                                  `http://localhost:3001/${caseStudy.company}`
                                 )
                               }
                             >

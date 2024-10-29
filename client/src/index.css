@@ -22,7 +22,8 @@ body {
   color: var(--light); */
 
   /* This is the background color of the main site */
-  background-color: black
+  background-color: black;
+  width: 100%;
 }
 
 /* .todo {

@@ -3,9 +3,10 @@
   display: flex;
   justify-content: flex-start;
   gap: 20px;
-  overflow-x: auto;
-  margin-left: 10vw;
-  margin-right: 5vw;
+
+  overflow-x: scroll;
+  margin-left: 5vw;
+  width: 90vw;
 }
   
   .border-container{
