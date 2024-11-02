@@ -29,6 +29,7 @@ const Home = () => {
   });
 
   return (
+    <>
     <div className="main">
       <NavBar highlight={current}></NavBar>
       <ProgressBar></ProgressBar>
@@ -48,15 +49,11 @@ const Home = () => {
         <Banner />
         </div>
       </div>
-       
-      <div id="section5" className="section">
-      <Alexa/>
       </div>
-       
-      <div id="section6" className="section">
+      <div id="section5" className="section">
         <GatorsUnidos/>
       </div>
-    </div>
+      </>
   );
 };
 
