@@ -21,6 +21,8 @@ import orangex from "../../images/orangeX.png";
 import field2 from "../../images/field2.png";
 import arrows from "../../images/arrows.png";
 import sec_x_gators from "../../images/sec_x_gators.svg"
+import arrow_image from "../../images/arrow_image.svg"
+import GU_SEC from "../../videos/GU_SEC.mp4"
 
 
 
@@ -28,39 +30,49 @@ const GatorsUnidos = () => {
   return (
     <div className="bg-[#0F082F]">
         {/* First section */}
-        <div className="font-[Gentona]">
-          <p className="text-[#EB6220]"> Case Study </p>
-            <div className="flex items-center justify-center">
-                <img src={sec_x_gators}/>
-            </div>
-          <div className ="flex items-center"> <div className ="w-5/6"> <div className="h-1 bg-[#EB6220]"></div></div></div> 
-          <p className="text-[#EB6220]">Taking a page out of the Latino Playbook</p>
-          <hr className=""></hr>
-          <img src={gradient} alt="gradient" id="" />
-        <img src={topview} alt="topview" id="" />
-        <img src={field} alt="field" id="" />
-        <img src={gradient} alt="gradient" id="" />
+        <div className="p-12 font-[Gentona]">
+        {/* <div className=""> 
+          <div className="relative w-full h-[80vh] overflow-hidden"> 
+          <img className="absolute top-0 w-full z-10" src={gradient} alt="gradient"/>
+          <img className="absolute w-full inset-0 object-cover" src={topview} alt="topview"/>
+          <img className="absolute w-full bottom-0 h-1/2 object-cover" src={field} alt="field"/>
+          <img className="mt-6 absolute rotate-180 bottom-0 w-full" src={gradient} alt="gradient"/>
+          </div>
+        </div>  */}
+          <div className="w-1/2"> 
+          <p className="text-4xl text-[#EB6220]"> Case Study </p>
+          <div className="flex items-center">
+              <img className="w-full" src={sec_x_gators}/>
+          </div>
+          <div className ="flex items-center"> <div className ="w-full"> <div className="h-1 bg-[#EB6220]"></div></div></div> 
+          <p className="text-4xl mt-3 text-[#EB6220]">Taking a page out of the Latino Playbook</p>
+          </div> 
         </div>
-        <div className="">
-          <img src={blue} alt="blue" id="" />
-          <img src={SECblue} alt="SECblue" id="" />
-          <div className="">
-            <img src={gradientline} alt="gradientline" id="" />
-            <p className="">
+        {/* Section 2 */}
+        <div className="relative">
+          <img className="absolute h-full z-0" src={SECblue} alt="SECblue" />
+          <div className="flex items-center relative">
+
+            <div className="relative flex flex-col">
+            <img className="absolute w-full h-[1em]" src={gradientline} alt="gradientline" id="" />
+            <p className="font-[Gentona] text-7xl m-4 ">
               THE FIRST HISPANIC AND LATINO 
               CELEBRATION CAMPAIGN FOR ESPN, THE SEC NETWORK,
               AND THE UNIVERSITY OF FLORIDA.
             </p>
-            <img src={gradientline} alt="gradientline" id="" />
-          </div>
-          <img src={footballer} alt="footballer" id="" />
-        </div>
-        <div className="">
-          <div className="">
-              <p className="">OUR STARTING LINEUP</p>
-              <hr className=""></hr>
+            <img className="absolute w-full h-[1em] top-full z-20" src={gradientline} alt="gradientline" id="" />
             </div>
-            <div className="">
+
+            <img className="z-30" src={footballer} alt="footballer" id="" />
+          </div>
+        </div>
+        {/* Section 3 */}
+        <div className="">
+          <div className="flex font-[Gentona] text-[#EB6220] items-center">
+              <p className="text-6xl m-5">OUR STARTING LINEUP</p>
+              <div className="bg-[#EB6220] h-[5px] flex-1"></div>
+          </div>
+            <div className="text-3xl m-10 text-center text-[Gentona] grid grid-rows-4 grid-flow-col gap-10 w-full h-full">
                 <div className="">Operations Manager</div>
                 <div className="">Account Supervisor</div>
                 <div className="">Project Manager</div>
@@ -77,38 +89,46 @@ const GatorsUnidos = () => {
                 <div className="">Video Editors</div>
                 <div className="">Photographer</div>
             </div>
-            <img src={gradient} alt="gradient" />
+            {/* <img src={gradient} alt="gradient" />
             <img src={helmets} alt="helmets" />
-            <img src={gradient} alt="gradient" />
-            <div className="">
-              <hr className=""></hr>
-              <p className="">THE PLAYING FIELD</p>
-            </div>
+            <img src={gradient} alt="gradient" /> */}
         </div>
-        <div className="">
-          <div className="">
-            <p className=""> We saw the opportunity to elevate this nonprofit during </p>
-            <p className=""> Hispanic Heritage Month. </p>
-            <p className=""> 
+        {/* Section 4 */}
+        <div> 
+          <div className="flex font-[Gentona] text-[#EB6220] items-center">
+              <div className="bg-[#EB6220] h-[5px] flex-1"></div>
+              <p className="text-6xl m-7">THE PLAYING FIELD</p>
+          </div>
+    
+        <div className="flex items-center">
+            <img src={basketballplayer} alt="basketballplayer" id="" />
+            <div className="flex justify-center"> 
+            <div className="w-1/2">
+            <p className=" text-6xl font-[Gentona]"> We saw the opportunity to elevate this nonprofit during 
+            <span className="text-[#EB6220]"> Hispanic Heritage Month</span>.
             It's inaugural merchandise drop was approaching, 
             and there was no better way to support Latino pride than 
             through Gators leaving it all on the court and the field. </p>
-          </div>
-          <img src={gradient} alt="gradient" id="" />
-          <img src={basketballplayer} alt="basketballplayer" id="" />
-          <img src={secfield} alt="secfield" id="" />
-          <img src={gradient} alt="gradient" id=""/>
-        </div>
-        <div className="">
-        <div className="">
-              <p className="">TIME FOR KICKOFF</p>
-              <hr className=""></hr>
+            </div> 
             </div>
-          <div className="">
-            <div className="">
-              <div className="">
+          {/* <img src={gradient} alt="gradient" id="" /> */}
+          {/* <img src={secfield} alt="secfield" id="" />
+          <img src={gradient} alt="gradient" id=""/> */}
+        </div>
+        </div>
+
+        {/* Section 5 */}
+        <div className="relative">
+        <div className="flex font-[Gentona] text-[#EB6220] items-center">
+              <p className="text-6xl m-7">TIME FOR KICKOFF </p>
+              <div className="bg-[#EB6220] h-[5px] flex-1"></div>
+        </div>
+          <img className="absolute inset-0 left-1/2 transform -translate-x-1/2 h-full z-0" src={alex} alt="alex" id="" />
+          <div className="m-5 flex flex-row relative">
+            <div className="flex flex-col w-1/3">
+              <div className="flex items-center">
                 <img src={orangex} alt="orangex" id="" />
-                <h2 className="">LINEAR SEGMENT</h2>
+                <h2 className="text-4xl">LINEAR SEGMENT</h2>
               </div>
               <p className="">Through a co-production capacity, a 6-minute segment 
                 showcased four Latino Gators and how that impacted their journeys 
@@ -116,10 +136,10 @@ const GatorsUnidos = () => {
                 oversight of pre-production planning, talent management, talent producing, 
                 and responsibility over the end-to-end content creation.</p>
             </div>
-            <div className="">
-            <div className="">
+            <div className="flex flex-col w-1/3">
+            <div className="flex items-center">
                 <img src={orangex} alt="orangex" id="" />
-                <h2 className="">IN-GAME DISPLAY</h2>
+                <h2 className="text-4xl">IN-GAME DISPLAY</h2>
               </div>
               <p className="">Handling all end-to-end creative involvement, 
                 we produced a 45-second advertisement that played 
@@ -127,10 +147,10 @@ const GatorsUnidos = () => {
                 football game, presenting the community Gators Unidos fosters 
                 along with its inaugural merchandise.</p>
             </div>
-            <div className="">
-            <div className="">
+            <div className="flex flex-col w-1/3">
+            <div className="flex items-center">
                 <img src={orangex} alt="orangex" id="" />
-                <h2 className="">SOCIAL CONTENT BOMBS</h2>
+                <h2 className="text-4xl">SOCIAL CONTENT BOMBS</h2>
               </div>
               <p className="">Through social content bombs across Instagram, X, 
                 Facebook, YouTube, and more, our team created 
@@ -138,24 +158,61 @@ const GatorsUnidos = () => {
                 fans closer to the Gators Unidos brand.</p>
             </div>
           </div>
-          <img src={blue} alt="blue" id="" />
-          <img src={alex} alt="alex" id="" />
-          <img src={gradient} alt="gradient" id=""/>
-        </div>
-        <div className="">
-          <img src={blue} alt="blue" id="" />
-        </div>
-        <div className="">
-            <div className="">
-              <hr className=""></hr>
-              <p className="">IMPACT</p>
-            </div>
 
-          <img src={gradient} alt="gradient" id="" />
-          <img src={field2} alt="field2" id="" />
-          <img src={arrows} alt="arrows" id="" />
-          <img src={gradient} alt="gradient" id="" />
         </div>
+        {/* Section 5: Video Portion */}
+        <div className="flex justify-center">
+        <div className="w-1/6 flex flex-col justify-center"> 
+          <p className="m-5 text-base"> Placement: UF Football In-Stadium Jumbotron, 3 GamesUF IG, FB, X/Tw, YT </p>
+          <p className="m-5 text-base"> Creative Agency: The Agency at UF Production Company: The Agency at UF Location and Talent Management: The Agency at UF Post-Production: The Agency at UF Score Composer: The Agency at UF Licensing: The Agency at UF Original Music Artist: Carliane Tamara </p>
+        </div>
+        <div class="">
+          <video controls>
+            <source src={GU_SEC} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          </div>
+        </div>
+
+      {/* Section 6: Impact */}
+        <div className="relative">
+        <div className="flex font-[Gentona] text-[#EB6220] items-center">
+              <div className="bg-[#EB6220] h-[5px] flex-1"></div>
+              <p className="text-6xl m-7">IMPACT </p>
+        </div>
+        {/* Three Columns with Stats */}
+        <div className="flex justify-around">
+          <div className="flex flex-col text-center">
+            <p className="text-7xl font-[Gentona] text-[#EB6220]"> 570K </p> 
+            <p> RETURN ON INVESTMENT </p> 
+
+          </div>
+          <div className="flex flex-col text-center">
+            <div className="mt-32"> 
+            <p className="text-7xl font-[Gentona] text-[#EB6220]"> 40% </p> 
+            <p> INCREASE IN SALES MONTH AFTER MONTH </p> 
+            </div> 
+
+          </div>
+          
+          <div className="flex flex-col text-center">
+            <p className="text-7xl font-[Gentona] text-[#EB6220]"> 230%</p> 
+            <p> INCREASE IN SALES AT LAUNCH OF CAMPAIGN</p> 
+
+          </div>
+            
+
+        </div> 
+          <div className=""> 
+          {/* <img src={gradient} alt="gradient" id="" /> */}
+          {/* <img src={field2} alt="field2" id="" /> */}
+          <img className="w-full" src={arrow_image} alt="" id="" />
+          {/* <img src={gradient} alt="gradient" id="" /> */}
+          </div>
+          
+           
+        </div>
+
     </div>
   );
 };
