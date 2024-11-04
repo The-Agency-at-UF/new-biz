@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Amazon from "./Amazon";
 import Google from "./Google";
-import Uber from "./Uber";
+import Uber from "../../case-studies/Uber/Uber";
 import Test from "./Test";
 import Michelob from "./Michelob";
-import Alexa from '../../case-studies/Alexa/Alexa';
-import Home from '../../../src/pages/Home';
+import Alexa from "../../case-studies/Alexa/Alexa";
+import Home from "../../../src/pages/Home";
 
 // import all case study components/pages
 import { db } from "../../firebase.config";
@@ -37,7 +37,9 @@ const CaseStudy = () => {
       if (docSnap.exists()) {
         setCaseStudies(docSnap.data().caseStudies);
         // Assuming your case studies have sections like "section1", "section2", etc.
-        const sections = docSnap.data().caseStudies.map((caseStudy, index) => `section${index + 1}`);
+        const sections = docSnap
+          .data()
+          .caseStudies.map((caseStudy, index) => `section${index + 1}`);
         setCaseStudySections(sections);
       } else {
         // handle url not pointing to document in DB
@@ -49,11 +51,15 @@ const CaseStudy = () => {
 
   return (
     <div>
-    <Home />
+      <Home />
       <h1>CASE STUDY</h1>
       {caseStudySections.map((section, index) => {
         const SpecificCaseStudy = caseStudyTags[caseStudies[index]];
-        return SpecificCaseStudy ? <div id={section} key={index}><SpecificCaseStudy /></div> : null;
+        return SpecificCaseStudy ? (
+          <div id={section} key={index}>
+            <SpecificCaseStudy />
+          </div>
+        ) : null;
       })}
     </div>
   );

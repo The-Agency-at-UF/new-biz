@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.uber-main-slide {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 8%,
+    rgba(255, 255, 255, 1) 75%
+  );
+  font-family: "Rubik", sans-serif;
+}
+.uber-main-content {
+  display: flex;
+  flex-direction: column;
+  align-self: end;
+  height: 60%;
+  margin: 20px;
+  width: 500px;
+}
+.uber-main-header {
+  font-weight: 600;
+  font-size: 40px;
+  margin: 20px;
+  color: #68bf70;
+}
+#uber_logo {
+  width: 400px;
+  margin: 10px;
+}
+.uber-main-divider {
+  background-color: #addec9;
+  height: 5px;
+  width: 100%;
+  margin-left: 5px;
+}
+.uber-main-subtitle {
+  margin-top: 25px;
+  font-size: 27px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.uber-team-slide {
+  background-color: black;
+  height: 100vh;
+}
+.uber-team-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Rubik", sans-serif;
+  padding-top: 40px;
+}
+.uber-team-text {
+  color: #68bf70;
+  font-size: 50px;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.uber-team-divider {
+  background-color: #addec9;
+  height: 5px;
+  width: 100%;
+}
+.uber-team-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.uber-team-table {
+  display: flex;
+  flex-direction: row;
+}
+.uber-team-subtitle {
+  font-family: "Roboto", sans-serif;
+}
+.uber-team-table-child {
+  margin: 60px;
+}
+
+.uber-team-table-item {
+  font-size: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+#uber_team_1 {
+  width: 40%;
+}
+#uber_team_2 {
+  width: 200px;
+}
+.uber-team-subtitle {
+  margin: 48px;
+  width: 30%;
+  text-align: center;
+  font-size: 24px;
+}
+
+.uber-gradient-slide {
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(0.5turn, #000000, #a8a8a8, #000000);
+  height: 100vh;
+  width: 100%;
+}
+
+.uber-gradient-left {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.uber-gradient-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+}
+
+.uber-gradient-block1 {
+  margin: 30px;
+  background-color: #68bf70;
+  height: 300px;
+}
+
+.uber-gradient-block2 {
+  margin: 30px;
+  background-color: #68bf70;
+  height: 300px;
+}
+
+.uber-gradient-block3 {
+  margin: 30px;
+  background-color: #68bf70;
+  width: 100%;
+  height: 300px;
+}

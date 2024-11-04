@@ -10,6 +10,7 @@ import NewTeam from "../components/Team/NewTeam";
 import WhoWeAre from "../components/WhoWeAre/WhatWeOffer";
 import Alexa from "../case-studies/Alexa/Alexa";
 import GatorsUnidos from "../case-studies/GatorsUnidos/GatorsUnidos";
+import Uber from "../case-studies/Uber/Uber";
 
 const Home = () => {
   const [current, setCurrent] = useState("section1");
@@ -40,21 +41,24 @@ const Home = () => {
       </div>
       <div id="section3" className="section">
         <h1>MEET THE TEAM</h1>
-        <Team/>
+        <Team />
       </div>
       <div id="section4">
         <div className="banner-container">
           <h1>We synergize with the best</h1>
-        <Banner />
+          <Banner />
         </div>
       </div>
-       
-      <div id="section5" className="section">
-      <Alexa/>
-      </div>
-       
+
+      {/* <div id="section5" className="section">
+        <Alexa />
+      </div> */}
+
+      {/* <div id="section6" className="section">
+        <GatorsUnidos />
+      </div> */}
       <div id="section6" className="section">
-        <GatorsUnidos/>
+        <Uber />
       </div>
     </div>
   );
