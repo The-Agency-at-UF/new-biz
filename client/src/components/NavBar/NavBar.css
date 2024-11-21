@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
   top: 0;
   left: 0;
   width: 100%;
@@ -8,6 +8,7 @@
   display: flex;
   justify-content: space-evenly;
   font-family: Gentona;
+  z-index: 1000;
 }
 
 .navbar-button-container {
@@ -18,7 +19,7 @@
   width: 150px;
   max-width: 1000px;
 }
-/* increased z-index so that navbar could go over "What We Offer" */ 
+
 .mousehover {
   width: 100%;
   height: 82px;
@@ -30,13 +31,13 @@
 .navbar.hidden {
   transform: translateY(-100%);
 }
-/* 
+
 .navbar a {
   text-decoration: none;
   font-size: 19px;
   font-weight: 400;
   text-align: center;
-} */
+} 
 
 .mousehover {
   height: 83px;
@@ -147,3 +148,4 @@
   text-decoration: none;
   text-align: center;
 }
+ */

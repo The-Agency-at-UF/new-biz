@@ -19,6 +19,15 @@ const Research = () => {
                                     <span>Product, Vertical or Media Audit</span>
                                 </p>
 
+                                <p> <span>Qualitative Research</span>
+                                    <span>Primary Research</span>
+                                    <span>Secondary Research</span>
+                                </p>
+
+                                <p> <span>Go-To-Market Planning</span>
+                                    <span>Marketing Strategy</span>
+                                </p>
+
                                 <p><span>Quantitative Research</span></p>
                                 
                             </div>

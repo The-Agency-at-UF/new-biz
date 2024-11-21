@@ -1,0 +1,68 @@
+/*font for navbar items*/
+@font-face {
+    font-family: 'Gentona';
+    src: local('Gentona'), url('../../fonts/Gentona\ Bold.otf');
+
+}
+/* navbar and navbar items */
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (min-width: 640px) {
+    .navbar-entry {
+    font-family: 'Gentona';
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 1rem 2rem 1rem 2rem;
+    cursor: pointer;
+    }
+    .logo {
+        font-size: 2.2rem;
+    }
+    
+    .standard-right{
+        display: flex;
+    }
+    .hamburger {
+        display: none;
+    }
+    .navbar{
+        padding: 1rem 2.2rem 1rem 2.2rem;
+        width: 100vw;
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar-entry {
+    font-family: 'Gentona';
+    font-weight: 400;
+    font-size: 1.25rem;
+    padding: 0 1rem 0 1rem;
+    cursor: pointer;
+    }
+    .logo{
+        font-size: 2rem;
+    }
+    .standard-right{
+        display: none;
+    }
+    .hamburger {
+        display: inline;
+    }
+    .navbar{
+        padding: 1rem 1.90rem 1rem 1.90rem;
+        width: 100vw;
+    }
+}
+
+.right-navbar {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

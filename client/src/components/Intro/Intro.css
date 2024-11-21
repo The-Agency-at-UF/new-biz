@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; 
+  height: 80vh; 
   padding: 20vw;
 }
 
@@ -18,42 +18,45 @@
 
 @media screen and (min-width: 1280px) {
   h1 {
-    font-size: 75px; 
+    font-size: 2.25rem; /* 36px */
+    line-height: 2.5rem; /* 40px */
   }
   p {
-    font-size: 25px; 
+    font-size: 1.875rem; /* 30px */
+    line-height: 2.25rem; /* 36px */
   }
 }
+
 @media screen and (max-width: 1024px) {
   h1 {
-    font-size: 2.5rem; 
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem; /* 32px */
   }
   p {
-    font-size: 1.5rem; 
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.75rem; /* 28px */
   }
 }
+
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 2.5rem; 
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75rem; /* 28px */
   }
   p {
-    font-size: 1.5rem; 
+    font-size: 1rem; /* 16px */
+    line-height: 1.5rem; /* 24px */
   }
 }
-@media screen and (max-width: 425px) {
+
+@media screen and (max-width: 640px) {
   h1 {
-    font-size: 1.5rem; 
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem; /* 20px */
   }
   p {
-    font-size: 1rem;
-  }
-}
-@media screen and (max-width: 321px) {
-  h1 {
-    font-size: 1.25rem; 
-  }
-  p {
-    font-size: 0.75rem; 
+    font-size: 0.75rem; /* 12px */
+    line-height: 1rem; /* 16px */ 
   }
 }
 

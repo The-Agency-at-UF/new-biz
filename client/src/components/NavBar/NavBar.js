@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+/* import React, { useState, useEffect } from "react";
 import "./NavBar.css";
 
 const NavBar = ({ highlight }) => {
@@ -10,9 +10,7 @@ const NavBar = ({ highlight }) => {
     "About",
     "Meet The Team",
     "Our Clients",
-    "Case 1",
-    "Case 2",
-    "Case 3",
+    "Case Studies"
   ];
 
   const handleMouseOver = () => {
@@ -28,7 +26,7 @@ const NavBar = ({ highlight }) => {
       const scrollY = window.scrollY;
       const isScrolled = scrollY > 50;
 
-      // Adjust the scroll threshold as needed
+      // adjust the scroll threshold as needed
       setNavbarVisible(!isScrolled);
     };
 
@@ -70,3 +68,4 @@ const NavBar = ({ highlight }) => {
 };
 
 export default NavBar;
+ */

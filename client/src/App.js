@@ -13,11 +13,16 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<Home />} />
+        <Route path="/meet-the-team" element={<Home />} />
+        <Route path="/our-clients" element={<Home />} />
+
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/:caseStudyId" element={<CaseStudy />} />
-
         {/* Add other routes as needed */}
       </Routes>
     </Router>

@@ -16,7 +16,7 @@ body {
     color: white;
   }
 
-#section4 p {
+#our-clients p {
   text-align: center;
   padding-left: 15%;
   padding-right: 15%;
@@ -30,88 +30,44 @@ body {
   line-height: normal;
 }
 
-#section3 h1 {
+#meet-the-team h1 {
     text-align: left;
     margin-left: 10vw;
-}
-
-.header h2 {
-    text-align: center;
 }
 
 /* add this to github*/
 body::-webkit-scrollbar {
   display: none;
 }
-#section4 h1 {
+
+#our-clients h1 {
   text-align: center;
   margin: auto;
 
   color: #fff;
   font-family: Gentona;
-  font-size: 40px;
+  font-size: 5vw;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   width: auto;
 }
 
-#section1 {
+#home {
   height: fit-content;
-  margin-bottom: 5vh;
-  margin-top: 5vh;
-  height: 200vh;
+  margin: 3.5em;
 }
-#section2 {
+#about {
   height: 100vh;
 }
-#section3 {
+#meet-the-team {
   padding-top: 10vw;
-}
-
-#section3 {
   height: fit-content;
 }
-
-#section4 {
+#our-clients {
  display: grid;
  place-items: center;  
  height: 100vh;   
-}
-
-#section5 {
-  height: 100vh;
-}
-#section6 {
-  height: 100vh;
-}
-#section7 {
-  height: 1000px;
-}
-#section8 {
-  height: 1000px;
-}
-
-.nav-1 {
-  color: rgb(243, 171, 87);
-}
-.nav-2 {
-  color: rgb(240, 143, 88);
-}
-.nav-3 {
-  color: rgb(237, 115, 90);
-}
-.nav-4 {
-  color: rgb(233, 93, 96);
-}
-.nav-5 {
-  color: rgb(214, 112, 142);
-}
-.nav-6 {
-  color: rgb(193, 131, 189);
-}
-.nav-7 {
-  color: rgb(173, 151, 236);
 }
 
 .team-section {
@@ -123,7 +79,7 @@ body::-webkit-scrollbar {
   display: inline-block;
 }
 
-#section3 .meet-team-header {
+#meet-the-team .meet-team-header {
   text-align: left !important;
   font-size: 4rem;
   font-family: Gentona;

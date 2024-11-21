@@ -8,18 +8,23 @@ const Creative = () => {
                             <div className="roles">
                                 <p> <span>Videography</span>
                                     <span>Photography</span>
-                                    <span>Audio Production</span>
+                                    <span>Content Creation</span>
                                 </p>
-                                
-                                <p> <span>Marketing Assets</span>
+                                <p>
                                     <span>Copywriting</span>
                                     <span>Graphic Design</span>
                                 </p>
-                                
                                 <p> <span>Experimental Marketing</span>
                                     <span>Ideation & Experimentation</span>
                                 </p>
-                                <p> <span>Concept Development</span></p>
+                                <p> <span>Concept Development</span>
+                                    <span>User Experience (UX)</span>
+                                    <span>User Interface (UI)</span>
+                                </p>
+                                <p> <span>Branding</span>
+                                    <span>Product Development</span>
+                                    <span>Illustration</span>
+                                </p>
                             </div>
                         </div>
                 </section>

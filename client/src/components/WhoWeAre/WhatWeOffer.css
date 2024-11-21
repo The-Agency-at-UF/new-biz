@@ -43,7 +43,25 @@
     height: 30px;
 }
 
+/* CS is not being displayed
 .client-services {
+    background-color: #FFB23E;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    h1 {
+        font-family: Gentona;
+        font-size: 80px;
+    }
+
+    background-image: 
+    linear-gradient(to right, rgba(255,0,0,0) 88%, #FE7B4B);
+    /*linear-gradient(to left, rgba(255,0,0,0) 88%, #8B6122);
+}
+*/
+
+.production {
     background-color: #FFB23E;
     position: relative;
     width: 100%;
@@ -113,6 +131,10 @@
     width: 100%;
     height: 100%;
 
+    p {
+        padding: 1em;
+    }
+
     h1 {
         font-family: Gentona;
         font-size: 80px;
@@ -126,7 +148,7 @@
 /* added z-index so that "What We Offer" could stay fixed over each slide */ 
 .section-title {
     position: absolute;
-    top: 20px;
+    top: 50px;
     left: 80px;
     font-size: 2.5rem;
     font-family: Gentona;
@@ -162,4 +184,20 @@
     }
 
     font-family: Gentona Book;
+}
+
+
+.tag-container {
+    display: flex;
+}
+
+.tag {
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: Gentona;
+}
+
+
+.button {
+    border-radius: 0px;
 }
