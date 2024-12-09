@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {},
     backgroundImage: {
-      'helmets': "url('../public/helmets.png')",
+      'helmets': "linear-gradient(180deg, rgba(15, 8, 47, 1), rgba(8, 30, 139, 0.23), rgba(15, 8, 47, 1)), url('../public/helmets.png')",
+      'field-sec': "linear-gradient(180deg, rgba(15, 8, 47, 1), rgba(8, 30, 139, 0.23), rgba(15, 8, 47, 1)), url('../public/fieldsec.png')",
+      'impact-field': "linear-gradient(180deg, rgba(15, 8, 47, 1), rgba(8, 30, 139, 0.23), rgba(15, 8, 47, 1)), url('../public/impact_field.png')",
+      "game-day": "linear-gradient(180deg, rgba(15, 8, 47, 1), rgba(8, 30, 139, 0), rgba(15, 8, 47, 1)), url('../public/game_day.png')",
     },
   },
   plugins: [],

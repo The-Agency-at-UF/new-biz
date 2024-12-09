@@ -3,7 +3,6 @@ import React from "react";
 import alex from "../../images/alex_g.png";
 import basketballplayer from "../../images/basketballplayer1.png";
 import billboard from "../../images/billboard.png";
-import field from "../../images/field.png";
 import footballer from "../../images/footballer.png";
 import gradient from "../../images/gradient.png";
 import purpose from "../../images/purpose.png";
@@ -18,7 +17,7 @@ import gradientline from "../../images/gradient_line.png";
 import secfield from "../../images/fieldsec.png";
 import helmets from "../../images/helmets.png";
 import orangex from "../../images/orangeX.png";
-import field2 from "../../images/field2.png";
+import impact_field from "../../images/impact_field.png";
 import arrows from "../../images/arrows.png";
 import sec_x_gators from "../../images/sec_x_gators.svg"
 import arrow_image from "../../images/arrow_image.svg"
@@ -30,7 +29,7 @@ const GatorsUnidos = () => {
   return (
     <div className="bg-[#0F082F]">
         {/* First section */}
-        <div className="p-12 font-[Gentona]">
+        <div className="p-12 font-[Gentona] bg-game-day">
         {/* <div className=""> 
           <div className="relative w-full h-[80vh] overflow-hidden"> 
           <img className="absolute top-0 w-full z-10" src={gradient} alt="gradient"/>
@@ -39,7 +38,7 @@ const GatorsUnidos = () => {
           <img className="mt-6 absolute rotate-180 bottom-0 w-full" src={gradient} alt="gradient"/>
           </div>
         </div>  */}
-          <div className="w-1/2"> 
+          <div className="md:w-1/2"> 
           <p className="text-4xl text-[#EB6220]"> Case Study </p>
           <div className="flex items-center">
               <img className="w-full" src={sec_x_gators}/>
@@ -50,8 +49,8 @@ const GatorsUnidos = () => {
         </div>
         {/* Section 2 */}
         <div className="relative">
-          <img className="absolute h-full z-0" src={SECblue} alt="SECblue" />
-          <div className="flex flex-col md:flex-row items-center relative h-80">
+          <img className="absolute md:h-full z-0" src={SECblue} alt="SECblue" />
+          <div className="flex flex-col md:flex-row items-center relative">
 
             <div className="relative flex flex-col md:flex-row">
             <img className="absolute w-full h-[1em]" src={gradientline} alt="gradientline" id="" />
@@ -62,19 +61,17 @@ const GatorsUnidos = () => {
             </p>
             <img className="absolute w-full h-[1em] top-full z-20" src={gradientline} alt="gradientline" id="" />
             </div>
-            <div className="h-full"> 
-            <img className="w-full z-30" src={footballer} alt="footballer" id="" />
-            </div>
+            <img className="relative h-[30em] z-30" src={footballer} alt="footballer" id="" />
           </div>
         </div>
         {/* Section 3 */}
-        <div className="bg-helmets bg-cover bg-center">
+        <div className="">
           <div>
           <div className="flex font-[Gentona] text-[#EB6220] items-center">
               <p className="text-6xl m-5">OUR STARTING LINEUP</p>
               <div className="bg-[#EB6220] h-[5px] flex-1"></div>
           </div>
-            <div className="text-3xl m-10 text-center text-[Gentona] flex flex-col md:grid md:grid-rows-4 md:grid-flow-col md:gap-10 gap-5 w-full h-full">
+            <div className="bg-helmets bg-cover bg-center text-3xl text-center text-[Gentona] flex flex-col md:grid md:grid-rows-4 md:grid-flow-col md:gap-10 gap-5 w-full h-full">
                 <div className="">Operations Manager</div>
                 <div className="">Account Supervisor</div>
                 <div className="">Project Manager</div>
@@ -101,7 +98,7 @@ const GatorsUnidos = () => {
               <p className="text-6xl m-7">THE PLAYING FIELD</p>
           </div>
     
-        <div className="flex flex-col md:flex-row items-center">
+        <div className="flex flex-col md:flex-row items-center bg-field-sec">
             <img className="w-1/2" src={basketballplayer} alt="basketballplayer" id="" />
             <div className="flex justify-center"> 
             <div className="w-1/2">
@@ -124,7 +121,7 @@ const GatorsUnidos = () => {
               <p className="text-6xl m-7">TIME FOR KICKOFF </p>
               <div className="bg-[#EB6220] h-[5px] flex-1"></div>
         </div>
-          <img className="absolute inset-0 left-1/2 transform -translate-x-1/2 xs:w-full md:h-full z-0" src={alex} alt="alex" id="" />
+          <img className="absolute inset-0 left-1/2 transform -translate-x-1/2 xs:w-full md:h-full z-0 opacity-[45%]" src={alex} alt="alex" id="" />
           <div className="m-5 gap-10 md:gap-0 flex flex-col items-center md:items-start md:flex-row relative">
             <div className="flex flex-col md:w-1/3">
               <div className="flex items-center">
@@ -176,20 +173,20 @@ const GatorsUnidos = () => {
         </div>
 
       {/* Section 6: Impact */}
-        <div className="relative">
+        <div className="relative bg-impact-field">
         <div className="flex font-[Gentona] text-[#EB6220] items-center">
               <div className="bg-[#EB6220] h-[5px] flex-1"></div>
               <p className="text-6xl m-7">IMPACT </p>
         </div>
         {/* Three Columns with Stats */}
-        <div className="flex justify-around">
+        <div className="flex md:flex-row flex-col md:justify-around">
           <div className="flex flex-col text-center">
             <p className="text-7xl font-[Gentona] text-[#EB6220]"> 570K </p> 
             <p> RETURN ON INVESTMENT </p> 
 
           </div>
           <div className="flex flex-col text-center">
-            <div className="mt-32"> 
+            <div className="md:mt-32"> 
             <p className="text-7xl font-[Gentona] text-[#EB6220]"> 40% </p> 
             <p> INCREASE IN SALES MONTH AFTER MONTH </p> 
             </div> 
