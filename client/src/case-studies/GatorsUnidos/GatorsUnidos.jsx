@@ -51,28 +51,30 @@ const GatorsUnidos = () => {
         {/* Section 2 */}
         <div className="relative">
           <img className="absolute h-full z-0" src={SECblue} alt="SECblue" />
-          <div className="flex items-center relative">
+          <div className="flex flex-col md:flex-row items-center relative h-80">
 
-            <div className="relative flex flex-col">
+            <div className="relative flex flex-col md:flex-row">
             <img className="absolute w-full h-[1em]" src={gradientline} alt="gradientline" id="" />
-            <p className="font-[Gentona] text-7xl m-4 ">
+            <p className="font-[Gentona] text-5xl 2xl:text-7xl m-4 ">
               THE FIRST HISPANIC AND LATINO 
               CELEBRATION CAMPAIGN FOR ESPN, THE SEC NETWORK,
               AND THE UNIVERSITY OF FLORIDA.
             </p>
             <img className="absolute w-full h-[1em] top-full z-20" src={gradientline} alt="gradientline" id="" />
             </div>
-
-            <img className="z-30" src={footballer} alt="footballer" id="" />
+            <div className="h-full"> 
+            <img className="w-full z-30" src={footballer} alt="footballer" id="" />
+            </div>
           </div>
         </div>
         {/* Section 3 */}
-        <div className="">
+        <div className="bg-helmets bg-cover bg-center">
+          <div>
           <div className="flex font-[Gentona] text-[#EB6220] items-center">
               <p className="text-6xl m-5">OUR STARTING LINEUP</p>
               <div className="bg-[#EB6220] h-[5px] flex-1"></div>
           </div>
-            <div className="text-3xl m-10 text-center text-[Gentona] grid grid-rows-4 grid-flow-col gap-10 w-full h-full">
+            <div className="text-3xl m-10 text-center text-[Gentona] flex flex-col md:grid md:grid-rows-4 md:grid-flow-col md:gap-10 gap-5 w-full h-full">
                 <div className="">Operations Manager</div>
                 <div className="">Account Supervisor</div>
                 <div className="">Project Manager</div>
@@ -89,9 +91,8 @@ const GatorsUnidos = () => {
                 <div className="">Video Editors</div>
                 <div className="">Photographer</div>
             </div>
-            {/* <img src={gradient} alt="gradient" />
-            <img src={helmets} alt="helmets" />
-            <img src={gradient} alt="gradient" /> */}
+            </div>
+           
         </div>
         {/* Section 4 */}
         <div> 
@@ -100,11 +101,11 @@ const GatorsUnidos = () => {
               <p className="text-6xl m-7">THE PLAYING FIELD</p>
           </div>
     
-        <div className="flex items-center">
-            <img src={basketballplayer} alt="basketballplayer" id="" />
+        <div className="flex flex-col md:flex-row items-center">
+            <img className="w-1/2" src={basketballplayer} alt="basketballplayer" id="" />
             <div className="flex justify-center"> 
             <div className="w-1/2">
-            <p className=" text-6xl font-[Gentona]"> We saw the opportunity to elevate this nonprofit during 
+            <p className="text-4xl font-[Gentona]"> We saw the opportunity to elevate this nonprofit during 
             <span className="text-[#EB6220]"> Hispanic Heritage Month</span>.
             It's inaugural merchandise drop was approaching, 
             and there was no better way to support Latino pride than 
@@ -123,9 +124,9 @@ const GatorsUnidos = () => {
               <p className="text-6xl m-7">TIME FOR KICKOFF </p>
               <div className="bg-[#EB6220] h-[5px] flex-1"></div>
         </div>
-          <img className="absolute inset-0 left-1/2 transform -translate-x-1/2 h-full z-0" src={alex} alt="alex" id="" />
-          <div className="m-5 flex flex-row relative">
-            <div className="flex flex-col w-1/3">
+          <img className="absolute inset-0 left-1/2 transform -translate-x-1/2 xs:w-full md:h-full z-0" src={alex} alt="alex" id="" />
+          <div className="m-5 gap-10 md:gap-0 flex flex-col items-center md:items-start md:flex-row relative">
+            <div className="flex flex-col md:w-1/3">
               <div className="flex items-center">
                 <img src={orangex} alt="orangex" id="" />
                 <h2 className="text-4xl">LINEAR SEGMENT</h2>
@@ -136,7 +137,7 @@ const GatorsUnidos = () => {
                 oversight of pre-production planning, talent management, talent producing, 
                 and responsibility over the end-to-end content creation.</p>
             </div>
-            <div className="flex flex-col w-1/3">
+            <div className="flex flex-col md:w-1/3">
             <div className="flex items-center">
                 <img src={orangex} alt="orangex" id="" />
                 <h2 className="text-4xl">IN-GAME DISPLAY</h2>
@@ -147,7 +148,7 @@ const GatorsUnidos = () => {
                 football game, presenting the community Gators Unidos fosters 
                 along with its inaugural merchandise.</p>
             </div>
-            <div className="flex flex-col w-1/3">
+            <div className="flex flex-col md:w-1/3">
             <div className="flex items-center">
                 <img src={orangex} alt="orangex" id="" />
                 <h2 className="text-4xl">SOCIAL CONTENT BOMBS</h2>
@@ -161,8 +162,8 @@ const GatorsUnidos = () => {
 
         </div>
         {/* Section 5: Video Portion */}
-        <div className="flex justify-center">
-        <div className="w-1/6 flex flex-col justify-center"> 
+        <div className="flex justify-center flex-col-reverse md:flex-row">
+        <div className="md:w-1/6 flex flex-col justify-center"> 
           <p className="m-5 text-base"> Placement: UF Football In-Stadium Jumbotron, 3 GamesUF IG, FB, X/Tw, YT </p>
           <p className="m-5 text-base"> Creative Agency: The Agency at UF Production Company: The Agency at UF Location and Talent Management: The Agency at UF Post-Production: The Agency at UF Score Composer: The Agency at UF Licensing: The Agency at UF Original Music Artist: Carliane Tamara </p>
         </div>
